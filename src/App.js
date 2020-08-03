@@ -27,9 +27,8 @@ function App() {
         </div>
         <div className="container">
           <div className="movie_details">
-            <span className="genre">
-              Action &nbsp; Adventure &nbsp; Fantasy
-            </span>
+            <span className="genre">Action - Adventure - Fantasy</span>
+            <br />
             <span className="name">Wonder Woman 1984</span>
             <p className="details">
               Set in the United States during the 1980s, a conflict arises

@@ -6,15 +6,23 @@ export default function MostPopular() {
     <div className="container">
       <div className="header">
         <span className="heading">The Most Popular Upcoming</span>
-        <img className="line2" src={require("../../assets/line.svg")} />
+        <img
+          className="line2"
+          src={require("../../assets/line.svg")}
+          alt="line"
+        />
       </div>
       <div className="movie_img upcoming">
-        <img className="play" src={require("../../assets/play.svg")} />
+        <img
+          className="play"
+          src={require("../../assets/play.svg")}
+          alt="play"
+        />
         <div className="image1">
-          <img src={require("../../assets/km_verti.jpg")} />
+          <img src={require("../../assets/km_verti.jpg")} alt="vertical" />
         </div>
         <div className="image2">
-          <img src={require("../../assets/km.jpg")} />
+          <img src={require("../../assets/km.jpg")} alt="horizontal" />
         </div>
       </div>
       <div className="movie_details upcoming">

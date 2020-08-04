@@ -7,7 +7,11 @@ export default function Upcoming() {
     <div className="container" style={{ marginTop: 180 }}>
       <div className="header">
         <span className="heading">Upcoming</span>
-        <img className="line3" src={require("../../assets/line.svg")} />
+        <img
+          className="line3"
+          src={require("../../assets/line.svg")}
+          alt="line"
+        />
       </div>
       <div className="main_movie">
         <Movie text="Penguin" image={require("../../assets/Rectangle 1.png")} />

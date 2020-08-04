@@ -17,18 +17,27 @@ export default function Gallery() {
         <div className="arrows">
           <img
             className="previous"
+            alt="previous"
             src={require("../../assets/previous.svg")}
           />
-          <img className="next" src={require("../../assets/next.svg")} />
+          <img
+            className="next"
+            alt="next"
+            src={require("../../assets/next.svg")}
+          />
         </div>
       </div>
       <div className="movie_img">
-        <img className="play" src={require("../../assets/play.svg")} />
+        <img
+          className="play"
+          alt="play"
+          src={require("../../assets/play.svg")}
+        />
         <div className="image1">
-          <img src={require("../../assets/ww_verti.jpg")} />
+          <img src={require("../../assets/ww_verti.jpg")} alt="vertical" />
         </div>
         <div className="image2">
-          <img src={require("../../assets/ww.jpg")} />
+          <img src={require("../../assets/ww.jpg")} alt="horizontal" />
         </div>
       </div>
     </div>

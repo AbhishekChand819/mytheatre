@@ -192,6 +192,7 @@ li {
 
 .movie_name {
   font-family: Montserrat;
+  margin-left: 5px;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;

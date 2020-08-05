@@ -27,12 +27,12 @@ export default function NowShowing() {
           image={require("../../assets/Rectangle 4.png")}
         />
         <Movie
-          text="Peter Rabbit 2: The <br />Runaway"
-          image={require("../../assets/Rectangle 5.png")}
-        />
-        <Movie
           text="The New Mutants"
           image={require("../../assets/Rectangle 6.png")}
+        />
+        <Movie
+          text="Peter Rabbit 2"
+          image={require("../../assets/Rectangle 5.png")}
         />
         <Movie text="Law" image={require("../../assets/Rectangle 7.png")} />
         <Movie

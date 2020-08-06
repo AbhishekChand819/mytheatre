@@ -186,6 +186,7 @@ li {
 }
 
 .movie_box img {
+  border-radius: 10px;
   width: 270px;
   height: 350px;
 }
@@ -193,11 +194,16 @@ li {
 .movie_name {
   font-family: Montserrat;
   margin-left: 5px;
+  margin-top: 10px;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 27px;
   color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 260px;
 }
 
 .line2 {

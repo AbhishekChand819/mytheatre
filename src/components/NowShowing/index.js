@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Movie from "../shared/Movie";
+import axios from "axios";
 
 export default function NowShowing() {
+  const [showing, setShowing] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://api.themoviedb.org/3/movie/now_playing", {
+        params: {
+          page: "1",
+          language: "en-US",
+          api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
+        },
+      })
+      .then((response) => {
+        setShowing(response.data.results);
+      });
+  }, []);
+
   return (
     <div className="container">
       <div className="header">
@@ -13,40 +30,13 @@ export default function NowShowing() {
         />
       </div>
       <div className="main_movie">
-        <Movie text="Penguin" image={require("../../assets/Rectangle 1.png")} />
-        <Movie
-          text="The Other Lamb"
-          image={require("../../assets/Rectangle 2.png")}
-        />
-        <Movie
-          text="French Biryani"
-          image={require("../../assets/Rectangle 3.png")}
-        />
-        <Movie
-          text="The One and Only Ivan"
-          image={require("../../assets/Rectangle 4.png")}
-        />
-        <Movie
-          text="The New Mutants"
-          image={require("../../assets/Rectangle 6.png")}
-        />
-        <Movie
-          text="Peter Rabbit 2"
-          image={require("../../assets/Rectangle 5.png")}
-        />
-        <Movie text="Law" image={require("../../assets/Rectangle 7.png")} />
-        <Movie
-          text="Gangubai Kathiawadi"
-          image={require("../../assets/Rectangle 8.png")}
-        />
-        <Movie
-          text="Satyameva Jayate 2"
-          image={require("../../assets/Rectangle 9.png")}
-        />
-        <Movie
-          text="No Time To Die"
-          image={require("../../assets/Rectangle 10.png")}
-        />
+        {showing.map((show) => (
+          <Movie
+            key={show.id}
+            text={show.title}
+            image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
+          />
+        ))}
       </div>
     </div>
   );

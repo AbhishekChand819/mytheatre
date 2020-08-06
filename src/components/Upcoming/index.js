@@ -24,6 +24,12 @@ export default function Upcoming() {
       });
   }, []);
 
+  Object.keys(upcoming).forEach((key) => {
+    if (upcoming[key].poster_path == null) {
+      delete upcoming[key];
+    }
+  });
+
   return (
     <div className="container" style={{ marginTop: 180 }}>
       <div className="header">

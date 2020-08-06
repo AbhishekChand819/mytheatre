@@ -1,3 +1,5 @@
+@import "../../../node_modules/react-slideshow-image/dist/styles.css";
+
 body {
   background-color: #0d2800;
   margin: 0px;
@@ -118,6 +120,7 @@ li {
 
 .next {
   margin-left: 40px;
+  left: 13.3%;
 }
 
 .movie_img {
@@ -251,7 +254,7 @@ li {
 }
 
 .see_more {
-  margin: 60px auto 0px auto;
+  margin: 30px auto 0px auto;
 }
 
 .container.footer {
@@ -314,4 +317,13 @@ li {
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.react-slideshow-container .nav {
+  position: absolute;
+  top: 80%;
+}
+
+.react-slideshow-wrapper .images-wrap {
+  height: 700px;
 }

@@ -5,9 +5,9 @@ import { Slide } from "react-slideshow-image";
 export default function Gallery() {
   const properties = {
     duration: 5000,
-    transitionDuration: 500,
-    infinite: true,
+    transitionDuration: 600,
     autoplay: false,
+    infinite: false,
     prevArrow: (
       <img
         className="previous"
@@ -19,6 +19,7 @@ export default function Gallery() {
       <img className="next" alt="next" src={require("../../assets/next.svg")} />
     ),
   };
+
   return (
     <Slide {...properties}>
       <div className="container each-slide">
@@ -33,7 +34,7 @@ export default function Gallery() {
           </p>
           <PrimaryBtn text="Book Now"></PrimaryBtn>
         </div>
-        <div className="movie_img">
+        <div className="movie_img slide1">
           <img
             className="play"
             alt="play"
@@ -59,7 +60,7 @@ export default function Gallery() {
           </p>
           <PrimaryBtn text="Book Now"></PrimaryBtn>
         </div>
-        <div className="movie_img">
+        <div className="movie_img slide2">
           <img
             className="play"
             alt="play"
@@ -85,7 +86,7 @@ export default function Gallery() {
           </p>
           <PrimaryBtn text="Book Now"></PrimaryBtn>
         </div>
-        <div className="movie_img">
+        <div className="movie_img slide3">
           <img
             className="play"
             alt="play"

@@ -3,9 +3,9 @@ import "./Style.css";
 import Navbar from "../Navbar";
 import Gallery from "../Gallery";
 import NowShowing from "../NowShowing";
-import MostPopular from "../MostPopular";
 import Upcoming from "../Upcoming";
 import Footer from "../Footer";
+import Trending from "../Trending";
 
 export default function Home() {
   return (
@@ -14,8 +14,9 @@ export default function Home() {
         <Navbar></Navbar>
         <Gallery></Gallery>
         <NowShowing></NowShowing>
-        <MostPopular></MostPopular>
         <Upcoming></Upcoming>
+        <Trending></Trending>
+        <NowShowing></NowShowing>
       </div>
       <Footer></Footer>
     </div>

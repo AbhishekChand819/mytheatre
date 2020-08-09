@@ -2,7 +2,12 @@
 /* @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
 
 body {
-  background-color: #0d2800;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 3, 20, 1) 0%,
+    rgba(17, 17, 170, 1) 59%,
+    rgba(0, 190, 228, 1) 91%
+  );
   margin: 0px;
 }
 
@@ -15,7 +20,7 @@ body {
 }
 
 .home {
-  color: rgba(53.868748024106026, 207.1875, 0, 1);
+  color: white;
   font-family: Monoton;
   font-size: 35px;
   letter-spacing: 0;
@@ -102,7 +107,7 @@ li {
   height: 60px;
   width: 215px;
   margin-top: 20px;
-  background: #238800;
+  background: white;
   cursor: pointer;
   border-radius: 10px;
   font-family: Montserrat;
@@ -111,7 +116,7 @@ li {
   font-size: 25px;
   line-height: 30px;
   outline: 0;
-  color: #ffffff;
+  color: #00288f;
 }
 
 .previous {
@@ -177,7 +182,7 @@ li {
   font-weight: 500;
   font-size: 36px;
   line-height: 44px;
-  color: #36cf00;
+  color: white;
 }
 
 .line {
@@ -237,6 +242,7 @@ li {
 
 .movie_img.upcoming .image1 {
   height: 300px;
+  right: 0% !important;
 }
 
 .movie_img.upcoming .image2 {
@@ -254,7 +260,7 @@ li {
 }
 
 .movie_img.upcoming .play {
-  right: 49%;
+  right: 37%;
   top: 100px;
   left: auto;
   cursor: pointer;
@@ -262,7 +268,7 @@ li {
 
 .line3 {
   margin-left: 25px;
-  width: 83%;
+  width: 67.5%;
   height: 25px;
 }
 
@@ -271,7 +277,6 @@ li {
 }
 
 .container.footer {
-  background-color: #000000;
   width: 100%;
 }
 

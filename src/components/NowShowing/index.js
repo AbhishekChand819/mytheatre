@@ -34,7 +34,7 @@ export default function NowShowing() {
       });
   }, []);
 
-  console.log(showing);
+  console.log(1);
 
   return (
     <div className="container">
@@ -46,10 +46,9 @@ export default function NowShowing() {
           alt="line"
         />
       </div>
-      {/* <div className="main_movie"> */}
       <Carousel>
-        {showing.map((shows) => (
-          <Carousel.Item>
+        {showing.map((shows, i) => (
+          <Carousel.Item key={i}>
             {shows.map((show) => (
               <Movie
                 key={show.id}
@@ -60,7 +59,6 @@ export default function NowShowing() {
           </Carousel.Item>
         ))}
       </Carousel>
-      {/* </div> */}
     </div>
   );
 }

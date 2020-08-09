@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../shared/Movie";
 import axios from "axios";
-import PrimaryBtn from "../shared/PrimaryButton";
+import Carousel from "react-bootstrap/Carousel";
 
 export default function Upcoming() {
   const [upcoming, setUpcoming] = useState([]);
@@ -20,36 +20,47 @@ export default function Upcoming() {
         },
       })
       .then((response) => {
-        setUpcoming(response.data.results);
+        let arr = [];
+        let final = [];
+        let start = 0;
+        let end = 5;
+        let size = response.data.results.length / 5;
+        for (let i = 0; i < size; i++) {
+          for (var j = start; j < end; j++) {
+            arr.push(response.data.results[j]);
+          }
+          final.push(arr);
+          arr = [];
+          start += 5;
+          end += 5;
+        }
+        setUpcoming(final);
       });
   }, []);
 
-  Object.keys(upcoming).forEach((key) => {
-    if (upcoming[key].poster_path == null) {
-      delete upcoming[key];
-    }
-  });
-
   return (
-    <div className="container" style={{ marginTop: 180 }}>
+    <div className="container">
       <div className="header">
-        <span className="heading">Upcoming</span>
+        <span className="heading">Upcoming Hindi Movies</span>
         <img
           className="line3"
           src={require("../../assets/line.svg")}
           alt="line"
         />
       </div>
-      <div className="main_movie">
-        {upcoming.map((show) => (
-          <Movie
-            key={show.id}
-            text={show.title}
-            image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
-          />
+      <Carousel>
+        {upcoming.map((shows, i) => (
+          <Carousel.Item key={i}>
+            {shows.map((show) => (
+              <Movie
+                key={show.id}
+                text={show.title}
+                image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
+              />
+            ))}
+          </Carousel.Item>
         ))}
-      </div>
-      <PrimaryBtn text="See More"></PrimaryBtn>
+      </Carousel>
     </div>
   );
 }

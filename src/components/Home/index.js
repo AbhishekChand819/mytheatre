@@ -6,6 +6,7 @@ import NowShowing from "../NowShowing";
 import Upcoming from "../Upcoming";
 import Footer from "../Footer";
 import Trending from "../Trending";
+import TopTv from "../TopTv";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <NowShowing></NowShowing>
         <Upcoming></Upcoming>
         <Trending></Trending>
-        <NowShowing></NowShowing>
+        <TopTv></TopTv>
       </div>
       <Footer></Footer>
     </div>

@@ -3,20 +3,18 @@ import Movie from "../shared/Movie";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 
-export default function Upcoming() {
-  const [upcoming, setUpcoming] = useState([]);
+export default function TopTv() {
+  const [toptv, setTopTv] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://api.themoviedb.org/3/discover/movie", {
+      .get("https://api.themoviedb.org/3/discover/tv", {
         params: {
           page: "1",
-          region: "IN",
-          include_adult: "false",
-          sort_by: "primary_release_date.desc",
-          primary_release_year: "2020",
+          include_null_first_air_dates: "false",
+          sort_by: "popularity.desc",
+          language: "en-US",
           api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
-          with_original_language: "hi",
         },
       })
       .then((response) => {
@@ -34,29 +32,29 @@ export default function Upcoming() {
           start += 5;
           end += 5;
         }
-        setUpcoming(final);
+        setTopTv(final);
       });
   }, []);
 
   return (
     <div className="container">
       <div className="header">
-        <span className="heading">Upcoming Hindi Movies</span>
+        <span className="heading">Top TV Shows</span>
         <img
-          className="line3"
+          className="line"
           src={require("../../assets/line.svg")}
           alt="line"
         />
       </div>
       <Carousel>
-        {upcoming.map((shows, i) => (
+        {toptv.map((tvs, i) => (
           <Carousel.Item key={i}>
-            {shows.map((show, j) => (
+            {tvs.map((tv, j) => (
               <Movie
                 id={j}
-                key={show.id}
-                text={show.title}
-                image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
+                key={tv.id}
+                text={tv.name}
+                image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${tv.poster_path}`}
               />
             ))}
           </Carousel.Item>

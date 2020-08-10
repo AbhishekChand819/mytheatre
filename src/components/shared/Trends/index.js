@@ -5,10 +5,8 @@ const Gradient = [
   "linear-gradient(rgba(84, 86, 175, 0.9),rgba(27, 27, 85, 0.9))",
   "linear-gradient(rgba(74, 190, 122, 0.767),rgba(6, 66, 48, 0.9))",
   "linear-gradient(rgba(128, 74, 190, 0.767),rgba(42, 6, 66, 0.9))",
-  "linear-gradient(rgba(128, 34, 90, 0.567),rgba(42, 6, 66, 0.9))",
-  "linear-gradient(rgba(28, 14, 230, 0.767),rgba(42, 6, 66, 0.9))",
-  "linear-gradient(rgba(70, 168, 50, 0.767),rgba(42, 6, 66, 0.9))",
-  "linear-gradient(rgba(238, 74, 190, 0.767),rgba(42, 6, 66, 0.9))",
+  "linear-gradient(rgba(238, 74, 190, 0.67),rgba(42, 6, 66, 0.9))",
+  "linear-gradient(rgba(68, 84, 10, 0.67),rgba(42, 6, 66, 0.9))",
 ];
 
 export default function Trends({ name, id, image }) {

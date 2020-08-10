@@ -199,11 +199,16 @@ li {
 }
 
 .movie_box {
+  width: 280px;
   display: flex;
   flex-direction: column;
-  padding-right: 56px;
+  margin-right: 20px;
   margin-top: 38px;
   cursor: pointer;
+}
+
+.box4 {
+  margin-right: 0px !important;
 }
 
 .movie_box img {
@@ -224,7 +229,7 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 220px;
+  width: 92%;
 }
 
 .line2 {
@@ -348,7 +353,6 @@ li {
 
 .carousel {
   position: relative;
-  margin-left: 30px;
 }
 
 .carousel.pointer-event {

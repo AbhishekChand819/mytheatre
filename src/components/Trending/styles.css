@@ -40,7 +40,11 @@
 }
 
 .card-6 {
-  grid-column: 1/4;
+  grid-column: 1/2;
+}
+
+.card-7 {
+  grid-column: 2/4;
 }
 
 .card {

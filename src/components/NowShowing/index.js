@@ -49,8 +49,9 @@ export default function NowShowing() {
       <Carousel>
         {showing.map((shows, i) => (
           <Carousel.Item key={i}>
-            {shows.map((show) => (
+            {shows.map((show, j) => (
               <Movie
+                id={j}
                 key={show.id}
                 text={show.title}
                 image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}

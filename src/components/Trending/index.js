@@ -15,7 +15,7 @@ export default function Trending() {
         },
       })
       .then((response) => {
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < 7; i++) {
           TrendArr.push(response.data.results[i]);
         }
         setTrending(TrendArr);

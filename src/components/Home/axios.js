@@ -1,16 +1,4 @@
 axios
-  .get("https://www.googleapis.com/youtube/v3/search?", {
-    params: {
-      part: "snippet",
-      q: "inception trailer",
-      key: "AIzaSyAZBAbJoIj3gqbaT-Cazl4-4hpIPqSEM30",
-    },
-  })
-  .then((response) => {
-    console.log(response.data.items);
-  });
-
-axios
   .get("http://www.omdbapi.com/", {
     params: {
       t: "Coolie No. 1",

@@ -9,6 +9,7 @@
 .more_details {
   border-radius: 5px;
   padding: 7px;
+  cursor: pointer;
 }
 
 .text {

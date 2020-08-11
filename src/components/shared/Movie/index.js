@@ -34,10 +34,19 @@ export default function Movie({ text, image, id }) {
         show={show}
         onHide={handleClose}
         backdrop="static"
-        keyboard={false}
+        keyboard={true}
+        centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+        <Modal.Header>
+          <Modal.Title>{text}</Modal.Title>
+          <div className="modal_btns">
+            <div className="watch_btn" onClick={handleShow}>
+              <h3 className="text">MORE DETAILS</h3>
+            </div>
+            <div className="more_details" onClick={handleClose}>
+              <h3 className="text">CLOSE</h3>
+            </div>
+          </div>
         </Modal.Header>
         <Modal.Body>
           <Trailer movie={text}></Trailer>

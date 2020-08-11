@@ -24,8 +24,8 @@ export default function Trailer({ movie }) {
       url="https://youtu.be/luai0p0y2zE"
       controls
       playbackRate={2}
-      width="896px"
-      height="504px"
+      width="1200px"
+      height="704px"
     />
   );
 }

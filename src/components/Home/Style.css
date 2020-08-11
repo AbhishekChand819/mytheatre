@@ -70,6 +70,7 @@ li {
 .movie_details {
   width: 390px;
   margin-top: 50px;
+  margin-left: 50px;
 }
 
 .genre {
@@ -98,8 +99,12 @@ li {
   font-weight: 500;
   font-size: 25px;
   line-height: 30px;
-  width: 90%;
   color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .book_btn {
@@ -121,12 +126,13 @@ li {
 
 .previous {
   cursor: pointer;
+  left: 13%;
 }
 
 .next {
   cursor: pointer;
   margin-left: 40px;
-  left: 13.3%;
+  left: 16%;
 }
 
 .movie_img {
@@ -136,35 +142,36 @@ li {
 }
 
 .slide1 {
-  left: 30% !important;
+  left: 31.1% !important;
 }
 
 .slide2 {
-  left: 50% !important;
+  left: 51.1% !important;
 }
 
 .slide3 {
-  left: 70% !important;
+  left: 71.1% !important;
 }
 
 .image1 {
   position: relative;
-  right: 14%;
+  right: 25%;
   opacity: 0.5;
+  width: 450px;
+  height: 450px;
 }
 
 .image2 {
   position: relative;
   z-index: 1;
   width: 470px;
-  top: -540px;
+  top: -545px;
   left: 36%;
   height: 640px;
 }
 
 .image2 img,
 .image1 img {
-  width: 100%;
   height: 100%;
 }
 
@@ -203,8 +210,12 @@ li {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
+  transition: all ease-in-out 400ms;
   margin-top: 38px;
-  cursor: pointer;
+}
+
+.movie_box:hover {
+  transform: scale(1.05);
 }
 
 .box4 {
@@ -348,7 +359,7 @@ li {
 }
 
 .react-slideshow-wrapper .images-wrap {
-  height: 700px;
+  height: 750px;
 }
 
 .carousel {
@@ -569,10 +580,9 @@ li {
 .modal {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 20%;
   z-index: 1050;
   display: none;
-  width: 100%;
   height: 100%;
   overflow: hidden;
   outline: 0;
@@ -580,7 +590,7 @@ li {
 
 .modal-dialog {
   position: relative;
-  width: auto;
+  width: max-content;
   margin: 0.5rem;
   pointer-events: none;
 }
@@ -596,32 +606,6 @@ li {
 .modal.show .modal-dialog {
   -webkit-transform: none;
   transform: none;
-}
-
-.modal.modal-static .modal-dialog {
-  -webkit-transform: scale(1.02);
-  transform: scale(1.02);
-}
-
-.modal-dialog-scrollable {
-  display: -ms-flexbox;
-  display: flex;
-  max-height: calc(100% - 1rem);
-}
-
-.modal-dialog-scrollable .modal-content {
-  max-height: calc(100vh - 1rem);
-  overflow: hidden;
-}
-
-.modal-dialog-scrollable .modal-header,
-.modal-dialog-scrollable .modal-footer {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.modal-dialog-scrollable .modal-body {
-  overflow-y: auto;
 }
 
 .modal-dialog-centered {
@@ -641,22 +625,6 @@ li {
   content: "";
 }
 
-.modal-dialog-centered.modal-dialog-scrollable {
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.modal-dialog-centered.modal-dialog-scrollable .modal-content {
-  max-height: none;
-}
-
-.modal-dialog-centered.modal-dialog-scrollable::before {
-  content: none;
-}
-
 .modal-content {
   position: relative;
   display: -ms-flexbox;
@@ -665,9 +633,8 @@ li {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: rgb(2, 2, 83);
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -679,7 +646,7 @@ li {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background-color: black;
 }
 
 .modal-backdrop.fade {
@@ -687,7 +654,7 @@ li {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .modal-header {
@@ -697,10 +664,15 @@ li {
   align-items: flex-start;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
+  padding: 1.5rem 1rem;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal_btns {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .modal-header .close {
@@ -709,21 +681,17 @@ li {
 }
 
 .modal-title {
-  margin-bottom: 0;
-  line-height: 1.5;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 24px;
+  color: white;
+  margin: auto 0px;
 }
 
 .modal-body {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem;
-}
-
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
 }

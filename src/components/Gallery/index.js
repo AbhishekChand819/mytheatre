@@ -42,9 +42,6 @@ export default function Gallery() {
     ),
   };
   // console.log(popular);
-  // backdrop_path
-  // overview
-  // poster_path
   // genre_ids[]
   return (
     <Slide {...properties}>
@@ -78,59 +75,6 @@ export default function Gallery() {
           </div>
         </div>
       ))}
-
-      {/* <div className="container each-slide">
-        <div className="movie_details">
-          <span className="genre">Adventure</span>
-          <br />
-          <span className="name">Wonder Woman 1984</span>
-          <p className="details">
-            Set in the United States during the 1980s, a conflict arises between
-            Diana Prince and the Soviet Union. Now, she must face her formidable
-            foe, Barbara Ann Minerva.
-          </p>
-          <PrimaryBtn text="Book Now"></PrimaryBtn>
-        </div>
-        <div className="movie_img slide2">
-          <img
-            className="play"
-            alt="play"
-            src={require("../../assets/play.svg")}
-          />
-          <div className="image1">
-            <img src={require("../../assets/ww_verti.jpg")} alt="vertical" />
-          </div>
-          <div className="image2">
-            <img src={require("../../assets/ww.jpg")} alt="horizontal" />
-          </div>
-        </div>
-      </div>
-      <div className="container each-slide">
-        <div className="movie_details">
-          <span className="genre">Fantasy</span>
-          <br />
-          <span className="name">Wonder Woman 1984</span>
-          <p className="details">
-            Set in the United States during the 1980s, a conflict arises between
-            Diana Prince and the Soviet Union. Now, she must face her formidable
-            foe, Barbara Ann Minerva.
-          </p>
-          <PrimaryBtn text="Book Now"></PrimaryBtn>
-        </div>
-        <div className="movie_img slide3">
-          <img
-            className="play"
-            alt="play"
-            src={require("../../assets/play.svg")}
-          />
-          <div className="image1">
-            <img src={require("../../assets/ww_verti.jpg")} alt="vertical" />
-          </div>
-          <div className="image2">
-            <img src={require("../../assets/ww.jpg")} alt="horizontal" />
-          </div>
-        </div>
-      </div> */}
     </Slide>
   );
 }

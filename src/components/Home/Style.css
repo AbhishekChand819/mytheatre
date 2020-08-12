@@ -25,6 +25,7 @@ body {
   font-size: 35px;
   letter-spacing: 0;
   cursor: pointer;
+  margin-top: 8px;
 }
 
 .tab {
@@ -48,16 +49,43 @@ body {
 }
 
 .main li:first-child {
+  margin-top: 8px;
   margin-left: 100px;
 }
 
-.main li:nth-last-child(1),
-li:nth-last-child(2) {
+.main li:nth-child(2),
+.main li:nth-child(3) {
+  margin-top: 8px;
+}
+
+.main li:nth-last-child(1) {
   float: right;
 }
 
 li {
   float: left;
+}
+
+.search_bar {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 450px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(17, 17, 170, 1);
+}
+
+.search_icon {
+  width: 24px;
+  position: relative;
+  left: -38px;
+  top: 5.5px;
 }
 
 .container {
@@ -96,7 +124,6 @@ li {
 .details {
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 500;
   font-size: 25px;
   line-height: 30px;
   color: #ffffff;

@@ -15,10 +15,16 @@ export default function Navbar() {
           <span className="tab">Theaters</span>
         </li>
         <li>
-          <span className="tab">Signup</span>
-        </li>
-        <li>
-          <span className="tab">Signin</span>
+          <input
+            className="search_bar"
+            type="text"
+            placeholder="Search..."
+          ></input>
+          <img
+            className="search_icon"
+            alt="Search icon"
+            src={require("../../assets/search.svg")}
+          ></img>
         </li>
       </ul>
     </div>

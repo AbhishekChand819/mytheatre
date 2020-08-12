@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
+import SearchResult from "./components/SearchResult";
 
 function App() {
   return (
     <Router>
-      <Route path="/" component={Home} />
+      <Switch>
+        <Route path="/search/:query" component={SearchResult} />
+        <Route path="/" component={Home} />
+      </Switch>
     </Router>
   );
 }

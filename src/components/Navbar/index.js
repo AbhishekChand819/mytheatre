@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function Navbar() {
+  let textInput = React.createRef();
+
+  function handleClick() {
+    console.log(textInput.current.value);
+  }
   return (
     <div className="navbar">
       <span className="home">Theatre</span>
@@ -16,11 +21,13 @@ export default function Navbar() {
         </li>
         <li>
           <input
+            ref={textInput}
             className="search_bar"
             type="text"
             placeholder="Search..."
           ></input>
           <img
+            onClick={handleClick}
             className="search_icon"
             alt="Search icon"
             src={require("../../assets/search.svg")}

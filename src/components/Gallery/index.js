@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import PrimaryBtn from "../shared/PrimaryButton";
-import { Slide } from "react-slideshow-image";
 import axios from "axios";
+import { Slide } from "react-slideshow-image";
+
+import SlideMovie from "../shared/SlideMovie";
 
 export default function Gallery() {
   const [popular, setPopular] = useState([]);
@@ -41,39 +42,17 @@ export default function Gallery() {
       <img className="next" alt="next" src={require("../../assets/next.svg")} />
     ),
   };
-  // console.log(popular);
-  // genre_ids[]
   return (
     <Slide {...properties}>
       {popular.map((movie, i) => (
-        <div className="container each-slide">
-          <div className="movie_details">
-            <span className="genre">Action</span>
-            <br />
-            <span className="name">{movie.title}</span>
-            <p className="details">{movie.overview}</p>
-            <PrimaryBtn text="More Details"></PrimaryBtn>
-          </div>
-          <div className={`movie_img slide${i + 1}`}>
-            <img
-              className="play"
-              alt="play"
-              src={require("../../assets/play.svg")}
-            />
-            <div className="image1">
-              <img
-                src={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.backdrop_path}`}
-                alt="vertical"
-              />
-            </div>
-            <div className="image2">
-              <img
-                src={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`}
-                alt="horizontal"
-              />
-            </div>
-          </div>
-        </div>
+        <SlideMovie
+          backdrop={movie.backdrop_path}
+          id={i}
+          overview={movie.overview}
+          poster={movie.poster_path}
+          title={movie.title}
+          key={movie.id}
+        ></SlideMovie>
       ))}
     </Slide>
   );

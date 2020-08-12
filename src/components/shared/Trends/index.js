@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Trailer from "../Trailer";
+
 const Gradient = [
   "linear-gradient(rgba(204, 30, 88, 0.6), rgba(20, 20, 20, 0.6))",
   "linear-gradient(rgba(31, 136, 168, 0.767),rgba(14, 46, 65, 0.9))",
@@ -10,9 +13,36 @@ const Gradient = [
 ];
 
 export default function Trends({ name, id, image }) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className={`card-${id + 1}`} key={id}>
-      <div className="card">
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={true}
+        centered
+      >
+        <Modal.Header>
+          <Modal.Title>{name}</Modal.Title>
+          <div className="modal_btns">
+            <div className="watch_btn" onClick={handleShow}>
+              <h3 className="text">MORE DETAILS</h3>
+            </div>
+            <div className="more_details" onClick={handleClose}>
+              <h3 className="text">CLOSE</h3>
+            </div>
+          </div>
+        </Modal.Header>
+        <Modal.Body>
+          <Trailer movie={name}></Trailer>
+        </Modal.Body>
+      </Modal>
+      <div className="card" onClick={handleShow}>
         <div
           className="card__side card__side--front"
           id={`front-${id + 1}`}

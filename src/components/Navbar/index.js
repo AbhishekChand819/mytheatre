@@ -1,10 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Navbar() {
+  const history = useHistory();
   let textInput = React.createRef();
 
   function handleClick() {
-    console.log(textInput.current.value);
+    history.push(`/search/q=${textInput.current.value}`);
   }
   return (
     <div className="navbar">

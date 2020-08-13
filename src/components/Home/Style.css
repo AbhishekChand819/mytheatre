@@ -83,6 +83,7 @@ li {
 
 .search_icon {
   width: 24px;
+  cursor: pointer;
   position: relative;
   left: -38px;
   top: 5.5px;
@@ -721,4 +722,19 @@ li {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.srch_main {
+  margin-top: 70px;
+}
+
+.srch_container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.heading.search {
+  font-size: 30px;
 }

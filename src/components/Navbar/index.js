@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Navbar() {
   const history = useHistory();
@@ -10,7 +10,9 @@ export default function Navbar() {
   }
   return (
     <div className="navbar">
-      <span className="home">Theatre</span>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <span className="home">Theatre</span>
+      </Link>
       <ul className="main">
         <li>
           <span className="tab">Now Showing</span>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Trends from "../shared/Trends";
-import "./styles.css";
 import axios from "axios";
 
 export default function Trending() {

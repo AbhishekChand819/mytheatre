@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Trailer from "../Trailer";
-import "./style.css";
 
 export default function Movie({ text, image, id }) {
   const [show, setShow] = useState(false);
@@ -19,9 +18,9 @@ export default function Movie({ text, image, id }) {
         style={{ backgroundImage: `url(${image})` }}
       ></div>
       <span className="movie_name">{text}</span>
-      <span className="about_movie">
+      {/* <span className="about_movie">
         PG-13 / 2h 49min / Adventure, Drama, Sci-Fi
-      </span>
+      </span> */}
       <div className="row">
         <div className="watch_btn" onClick={handleShow}>
           <h3 className="text">WATCH TRAILER</h3>

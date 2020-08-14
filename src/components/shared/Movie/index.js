@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Trailer from "../Trailer";
+import { useHistory } from "react-router-dom";
 
-export default function Movie({ text, image, id }) {
+export default function Movie({ text, image, id, item_id, type }) {
   const [show, setShow] = useState(false);
+  const history = useHistory();
+
+  function handleClick() {
+    console.log(type);
+    history.push(`/${type}/${item_id}`);
+  }
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,7 +32,7 @@ export default function Movie({ text, image, id }) {
         <div className="watch_btn" onClick={handleShow}>
           <h3 className="text">WATCH TRAILER</h3>
         </div>
-        <div className="more_details">
+        <div className="more_details" onClick={handleClick}>
           <h3 className="text">MORE DETAILS</h3>
         </div>
       </div>
@@ -39,7 +46,13 @@ export default function Movie({ text, image, id }) {
         <Modal.Header>
           <Modal.Title>{text}</Modal.Title>
           <div className="modal_btns">
-            <div className="watch_btn" onClick={handleShow}>
+            <div
+              className="watch_btn"
+              onClick={() => {
+                handleShow();
+                handleClick();
+              }}
+            >
               <h3 className="text">MORE DETAILS</h3>
             </div>
             <div className="more_details" onClick={handleClose}>

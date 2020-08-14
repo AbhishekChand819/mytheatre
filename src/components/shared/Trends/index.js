@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Trailer from "../Trailer";
+import { useHistory } from "react-router-dom";
 
 const Gradient = [
   "linear-gradient(rgba(204, 30, 88, 0.6), rgba(20, 20, 20, 0.6))",
@@ -12,8 +13,13 @@ const Gradient = [
   "linear-gradient(rgba(68, 84, 10, 0.67),rgba(42, 6, 66, 0.9))",
 ];
 
-export default function Trends({ name, id, image }) {
+export default function Trends({ name, id, image, item_id, type }) {
   const [show, setShow] = useState(false);
+  const history = useHistory();
+
+  function handleClick() {
+    history.push(`/${type}/${item_id}`);
+  }
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -30,7 +36,13 @@ export default function Trends({ name, id, image }) {
         <Modal.Header>
           <Modal.Title>{name}</Modal.Title>
           <div className="modal_btns">
-            <div className="watch_btn" onClick={handleShow}>
+            <div
+              className="watch_btn"
+              onClick={() => {
+                handleShow();
+                handleClick();
+              }}
+            >
               <h3 className="text">MORE DETAILS</h3>
             </div>
             <div className="more_details" onClick={handleClose}>

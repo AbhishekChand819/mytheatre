@@ -53,7 +53,9 @@ export default function TopTv() {
               <Movie
                 id={j}
                 key={tv.id}
+                item_id={tv.id}
                 text={tv.name}
+                type="tv"
                 image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${tv.poster_path}`}
               />
             ))}

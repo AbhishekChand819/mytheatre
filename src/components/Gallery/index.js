@@ -52,6 +52,8 @@ export default function Gallery() {
           poster={movie.poster_path}
           title={movie.title}
           key={movie.id}
+          item_id={movie.id}
+          type="movie"
         ></SlideMovie>
       ))}
     </Slide>

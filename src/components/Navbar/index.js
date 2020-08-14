@@ -1,13 +1,8 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar";
 
 export default function Navbar() {
-  const history = useHistory();
-  let textInput = React.createRef();
-
-  function handleClick() {
-    history.push(`/search/q=${textInput.current.value}`);
-  }
   return (
     <div className="navbar">
       <Link to="/" style={{ textDecoration: "none" }}>
@@ -24,18 +19,7 @@ export default function Navbar() {
           <span className="tab">Theaters</span>
         </li>
         <li>
-          <input
-            ref={textInput}
-            className="search_bar"
-            type="text"
-            placeholder="Search..."
-          ></input>
-          <img
-            onClick={handleClick}
-            className="search_icon"
-            alt="Search icon"
-            src={require("../../assets/search.svg")}
-          ></img>
+          <SearchBar></SearchBar>
         </li>
       </ul>
     </div>

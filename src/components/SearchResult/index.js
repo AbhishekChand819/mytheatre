@@ -17,7 +17,7 @@ export default function SearchResult() {
         params: {
           language: "en-US",
           query: query,
-          include_adult: "true",
+          include_adult: "false",
           page: "1",
           api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
         },
@@ -47,6 +47,8 @@ export default function SearchResult() {
                       <Movie
                         key={show.id}
                         text={show.title}
+                        item_id={show.id}
+                        type={show.media_type}
                         image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}`}
                       />
                     );
@@ -55,6 +57,8 @@ export default function SearchResult() {
                       <Movie
                         key={show.id}
                         text={show.original_name}
+                        item_id={show.id}
+                        type={show.media_type}
                         image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
                       />
                     );

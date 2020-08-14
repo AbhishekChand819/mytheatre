@@ -38,6 +38,8 @@ export default function Trending() {
             image={trend.poster_path}
             name={trend.title}
             key={trend.id}
+            item_id={trend.id}
+            type="movie"
           ></Trends>
         ))}
       </div>

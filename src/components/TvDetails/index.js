@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
 
-export default function MovieDetails() {
+export default function TvDetails() {
   const [details, setDeatails] = useState([]);
   const { query } = useParams();
 

@@ -55,7 +55,9 @@ export default function Upcoming() {
               <Movie
                 id={j}
                 key={show.id}
+                item_id={show.id}
                 text={show.title}
+                type="movie"
                 image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
               />
             ))}

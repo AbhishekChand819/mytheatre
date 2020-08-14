@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../Navbar";
 import axios from "axios";
 import Movie from "../shared/Movie";
 
+import Navbar from "../Navbar";
 import Footer from "../Footer";
 
 import { useParams } from "react-router-dom";

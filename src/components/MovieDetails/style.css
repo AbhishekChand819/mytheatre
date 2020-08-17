@@ -1,0 +1,74 @@
+.row_detail {
+  display: flex;
+  flex-direction: row;
+  margin: 80px auto;
+  margin-bottom: 15px;
+}
+
+.mov_details {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.mov_image img {
+  width: 400px;
+  height: 550px;
+}
+
+.movie_title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.movie_genre {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.genre_star {
+  display: flex;
+}
+
+.star_container {
+  position: relative;
+  left: 50%;
+}
+
+.movie_content {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 25px;
+  padding-top: 10px;
+  color: #ffffff;
+  line-height: 35px;
+}
+
+.line_white {
+  margin: 31px 0px;
+  width: 100%;
+}
+
+.see_more {
+  margin: 0px;
+}
+
+.book_btn {
+  margin: 0px;
+}
+
+.other_div {
+  display: flex;
+}
+
+.other_item {
+  padding-top: 20px;
+}
+
+.runtime {
+  position: relative;
+  left: 45%;
+}

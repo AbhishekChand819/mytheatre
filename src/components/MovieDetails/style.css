@@ -1,74 +1,81 @@
 .row_detail {
   display: flex;
   flex-direction: row;
-  margin: 80px auto;
+  margin: 80px 40px;
   margin-bottom: 15px;
 }
 
+.mov_image {
+  background-color: black;
+  height: max-content;
+}
+
 .mov_details {
-  margin-top: 20px;
   margin-left: 100px;
 }
 
-.mov_image img {
-  width: 400px;
+.poster {
   height: 550px;
+  opacity: 0.7;
 }
 
 .movie_title {
   font-family: Montserrat;
   font-style: normal;
-  font-size: 40px;
+  font-size: 32px;
+  font-weight: 500;
   color: #ffffff;
 }
 
 .movie_genre {
   font-family: Montserrat;
   font-style: normal;
-  font-size: 25px;
+  font-size: 22px;
   color: #ffffff;
 }
 
 .genre_star {
   display: flex;
+  justify-content: space-between;
 }
 
 .star_container {
-  position: relative;
-  left: 50%;
+  display: flex;
 }
 
 .movie_content {
   font-family: Montserrat;
-  font-style: normal;
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 22px;
   padding-top: 10px;
   color: #ffffff;
   line-height: 35px;
 }
 
 .line_white {
-  margin: 31px 0px;
+  margin: 22px 0px;
   width: 100%;
-}
-
-.see_more {
-  margin: 0px;
-}
-
-.book_btn {
-  margin: 0px;
 }
 
 .other_div {
   display: flex;
+  justify-content: space-between;
 }
 
-.other_item {
-  padding-top: 20px;
+.play_trailer {
+  width: 70px;
+  position: absolute;
+  top: 46%;
+  left: 20.5%;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.8s ease;
 }
 
-.runtime {
-  position: relative;
-  left: 45%;
+.play_trailer:hover {
+  transform: scale(1.2);
+}
+
+.play_trailer:active {
+  transform: translateY(-1px);
 }

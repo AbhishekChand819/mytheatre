@@ -19,7 +19,7 @@ export default function Trending() {
         }
         setTrending(TrendArr);
       });
-  });
+  }, []);
 
   return (
     <div className="main_area">

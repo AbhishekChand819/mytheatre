@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
 
+import Cast from "../shared/Cast";
+import Carousel from "react-bootstrap/Carousel";
+
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -12,6 +15,8 @@ import { useParams } from "react-router-dom";
 export default function MovieDetails() {
   const { query } = useParams();
   const [details, setDetails] = useState([]);
+  const [cast, setCast] = useState([]);
+
   useEffect(() => {
     axios
       .all([
@@ -40,20 +45,26 @@ export default function MovieDetails() {
         }),
       ])
       .then(
-        axios.spread((data1, data2, data3, data4) => {
+        axios.spread((data1, data2, data3) => {
           setDetails(data1.data);
-          console.log(data1.data);
+          let arr = [];
+          let final = [];
+          let start = 0;
+          let end = 6;
+          let size = data2.data.cast.length / 6;
+          for (let i = 0; i < size; i++) {
+            for (var j = start; j < end; j++) {
+              arr.push(data2.data.cast[j]);
+            }
+            final.push(arr);
+            arr = [];
+            start += 6;
+            end += 6;
+          }
+          setCast(final);
         })
       );
-    // .get(`https://api.themoviedb.org/3/movie/${query}`, {
-    //   params: {
-    //     api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
-    //   },
-    // })
-    // .then((response) => {
-    //   setDetails(response.data);
-    // });
-  }, [details]);
+  }, []);
 
   return (
     <div>
@@ -128,6 +139,34 @@ export default function MovieDetails() {
             </div>
             <LineSvg className="line_white"></LineSvg>
           </div>
+        </div>
+        <div className="cast_container">
+          <span className="heading">Cast</span>
+          <img
+            className="line"
+            src={require("../../assets/line.svg")}
+            alt="line"
+          />
+          <Carousel>
+            {cast.map((shows, i) => (
+              <Carousel.Item key={i}>
+                {shows.map((show, j) =>
+                  show ? (
+                    <Cast
+                      id={j}
+                      key={show.id}
+                      item_id={show.id}
+                      text={show.name}
+                      type="movie"
+                      image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.profile_path}`}
+                    />
+                  ) : (
+                    <h1></h1>
+                  )
+                )}
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </div>
       </div>
       <Footer></Footer>

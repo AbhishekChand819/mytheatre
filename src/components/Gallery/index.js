@@ -25,7 +25,7 @@ export default function Gallery() {
         }
         setPopular(popularArr);
       });
-  });
+  }, []);
   const properties = {
     duration: 5000,
     transitionDuration: 600,

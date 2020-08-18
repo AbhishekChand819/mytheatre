@@ -79,3 +79,15 @@
 .play_trailer:active {
   transform: translateY(-1px);
 }
+
+.movie_box {
+  width: 230px !important;
+}
+
+.movie-img {
+  height: 280px !important;
+}
+
+.cast_container {
+  margin: 50px;
+}

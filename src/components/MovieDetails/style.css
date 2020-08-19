@@ -80,14 +80,25 @@
   transform: translateY(-1px);
 }
 
-.movie_box {
+.movie_box .cast {
   width: 230px !important;
 }
 
-.movie-img {
+.movie-img .cast {
   height: 280px !important;
 }
 
 .cast_container {
   margin: 50px;
+}
+
+.review_container {
+  margin: 50px;
+  margin-top: 120px;
+}
+
+.review_main {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 40px;
 }

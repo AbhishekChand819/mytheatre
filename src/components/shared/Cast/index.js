@@ -5,9 +5,9 @@ export default function Cast({ text, image, id, item_id, type }) {
     image = require("../../../assets/noimage.png");
   }
   return (
-    <div className={`movie_box box${id}`}>
+    <div className={`movie_box cast box${id}`}>
       <div
-        className="movie-img"
+        className="movie-img cast"
         style={{ backgroundImage: `url(${image})` }}
       ></div>
       <span className="movie_name">{text}</span>

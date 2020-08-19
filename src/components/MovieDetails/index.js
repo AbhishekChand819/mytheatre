@@ -4,6 +4,7 @@ import "./style.css";
 
 import Cast from "../shared/Cast";
 import Carousel from "react-bootstrap/Carousel";
+import Review from "../shared/Review";
 
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -16,6 +17,7 @@ export default function MovieDetails() {
   const { query } = useParams();
   const [details, setDetails] = useState([]);
   const [cast, setCast] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     axios
@@ -37,7 +39,7 @@ export default function MovieDetails() {
             page: "1",
           },
         }),
-        axios.get(`https://api.themoviedb.org/3/movie/${query}/videos`, {
+        axios.get(`https://api.themoviedb.org/3/movie/${query}/reviews`, {
           params: {
             api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
             language: "en-US",
@@ -45,8 +47,10 @@ export default function MovieDetails() {
         }),
       ])
       .then(
-        axios.spread((data1, data2, data3) => {
+        axios.spread((data1, data2, data3, data4) => {
           setDetails(data1.data);
+          setReviews(data4.data.results);
+          console.log(data4.data.results);
           let arr = [];
           let final = [];
           let start = 0;
@@ -167,6 +171,28 @@ export default function MovieDetails() {
               </Carousel.Item>
             ))}
           </Carousel>
+        </div>
+        <div className="review_container">
+          <span className="heading">Reviews</span>
+          <img
+            className="line"
+            src={require("../../assets/line.svg")}
+            alt="line"
+          />
+          <div className="review_main">
+            {reviews.map((review, i) =>
+              i < 6 ? (
+                <Review
+                  author={review.author}
+                  authorid={review.id}
+                  message={review.content}
+                  key={i}
+                ></Review>
+              ) : (
+                <h1></h1>
+              )
+            )}
+          </div>
         </div>
       </div>
       <Footer></Footer>

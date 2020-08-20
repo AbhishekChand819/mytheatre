@@ -3,6 +3,8 @@ import axios from "axios";
 import "./style.css";
 
 import Cast from "../shared/Cast";
+import Movie from "../shared/Movie";
+
 import Carousel from "react-bootstrap/Carousel";
 import Review from "../shared/Review";
 
@@ -18,6 +20,7 @@ export default function MovieDetails() {
   const [details, setDetails] = useState([]);
   const [cast, setCast] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [similar, setSimilar] = useState([]);
 
   useEffect(() => {
     axios
@@ -50,22 +53,36 @@ export default function MovieDetails() {
         axios.spread((data1, data2, data3, data4) => {
           setDetails(data1.data);
           setReviews(data4.data.results);
-          console.log(data4.data.results);
           let arr = [];
           let final = [];
           let start = 0;
-          let end = 6;
-          let size = data2.data.cast.length / 6;
+          let end = 5;
+          let size = data2.data.cast.length / 5;
           for (let i = 0; i < size; i++) {
-            for (var j = start; j < end; j++) {
+            for (let j = start; j < end; j++) {
               arr.push(data2.data.cast[j]);
             }
             final.push(arr);
             arr = [];
-            start += 6;
-            end += 6;
+            start += 5;
+            end += 5;
           }
           setCast(final);
+          arr = [];
+          final = [];
+          start = 0;
+          end = 5;
+          size = data3.data.results.length / 5;
+          for (let i = 0; i < size; i++) {
+            for (let j = start; j < end; j++) {
+              arr.push(data3.data.results[j]);
+            }
+            final.push(arr);
+            arr = [];
+            start += 5;
+            end += 5;
+          }
+          setSimilar(final);
         })
       );
   }, []);
@@ -77,10 +94,12 @@ export default function MovieDetails() {
         <div className="row_detail">
           <div className="mov_image">
             <img
+              alt="trailer"
               className="play_trailer"
               src={require("../../assets/play.svg")}
             ></img>
             <img
+              alt="poster"
               className="poster"
               src={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${details.poster_path}`}
             ></img>
@@ -165,34 +184,64 @@ export default function MovieDetails() {
                       image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.profile_path}`}
                     />
                   ) : (
-                    <h1></h1>
+                    ""
                   )
                 )}
               </Carousel.Item>
             ))}
           </Carousel>
         </div>
-        <div className="review_container">
-          <span className="heading">Reviews</span>
-          <img
-            className="line"
-            src={require("../../assets/line.svg")}
-            alt="line"
-          />
-          <div className="review_main">
-            {reviews.map((review, i) =>
-              i < 6 ? (
-                <Review
-                  author={review.author}
-                  authorid={review.id}
-                  message={review.content}
-                  key={i}
-                ></Review>
-              ) : (
-                <h1></h1>
-              )
-            )}
+        {reviews.length !== 0 ? (
+          <div className="review_container">
+            <span className="heading">Reviews</span>
+            <img
+              className="line"
+              src={require("../../assets/line.svg")}
+              alt="line"
+            />
+            <div className="review_main">
+              {reviews.map((review, i) =>
+                i < 6 ? (
+                  <Review
+                    author={review.author}
+                    authorid={review.id}
+                    message={review.content}
+                    key={i}
+                  ></Review>
+                ) : (
+                  ""
+                )
+              )}
+            </div>
           </div>
+        ) : (
+          ""
+        )}
+        <div className="container">
+          <div className="header">
+            <span className="heading">Similar Movies</span>
+            <img
+              className="line"
+              src={require("../../assets/line.svg")}
+              alt="line"
+            />
+          </div>
+          <Carousel>
+            {similar.map((shows, i) => (
+              <Carousel.Item key={i}>
+                {shows.map((show, j) => (
+                  <Movie
+                    id={j}
+                    key={show.id}
+                    item_id={show.id}
+                    text={show.title}
+                    type="movie"
+                    image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
+                  />
+                ))}
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </div>
       </div>
       <Footer></Footer>

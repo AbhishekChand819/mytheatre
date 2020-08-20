@@ -81,7 +81,7 @@
 }
 
 .movie_box .cast {
-  width: 230px !important;
+  width: 100% !important;
 }
 
 .movie-img .cast {
@@ -101,4 +101,13 @@
   display: flex;
   flex-flow: wrap;
   margin-top: 40px;
+}
+
+.no_data {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 22px;
+  padding-top: 10px;
+  color: #ffffff;
+  line-height: 35px;
 }

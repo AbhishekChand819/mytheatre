@@ -8,7 +8,6 @@ export default function Movie({ text, image, id, item_id, type }) {
   const history = useHistory();
 
   function handleClick() {
-    console.log(type);
     history.push(`/${type}/${item_id}`);
   }
 

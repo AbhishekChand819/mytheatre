@@ -34,8 +34,6 @@ export default function NowShowing() {
       });
   }, []);
 
-  console.log(1);
-
   return (
     <div className="container">
       <div className="header">

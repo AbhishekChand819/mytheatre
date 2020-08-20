@@ -8,6 +8,7 @@ export default function Review({ author, authorid, message }) {
         <div class="review-profile">
           <div class="review-profile__photo" href="#">
             <img
+              alt="profile"
               class="profile-photo__img"
               src="https://pbs.twimg.com/profile_images/631495506770817024/6OX4_2Gq.png"
             ></img>

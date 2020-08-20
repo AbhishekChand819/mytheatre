@@ -18,6 +18,7 @@ import { useParams } from "react-router-dom";
 export default function MovieDetails() {
   const { query } = useParams();
   const [details, setDetails] = useState([]);
+  const [genres, setGenres] = useState([]);
   const [cast, setCast] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [similar, setSimilar] = useState([]);
@@ -52,6 +53,7 @@ export default function MovieDetails() {
       .then(
         axios.spread((data1, data2, data3, data4) => {
           setDetails(data1.data);
+          setGenres(data1.data.genres);
           setReviews(data4.data.results);
           let arr = [];
           let final = [];
@@ -86,6 +88,7 @@ export default function MovieDetails() {
         })
       );
   }, []);
+  console.log(details);
 
   return (
     <div>
@@ -106,12 +109,8 @@ export default function MovieDetails() {
           </div>
           <div className="mov_details">
             <span className="movie_title">{details.title}</span>
-            <LineSvg className="line_white"></LineSvg>
 
-            <div className="genre_star">
-              <span className="movie_genre">
-                Genres : Action Adventure Fantasy
-              </span>
+            {/* <div className="genre_star">
               <div className="star_container">
                 <span className="movie_genre">Ratings : </span>
                 <div>
@@ -142,25 +141,58 @@ export default function MovieDetails() {
                   />
                 </div>
               </div>
-            </div>
-            <LineSvg className="line_white"></LineSvg>
-
-            <span className="movie_content">{details.overview}</span>
-            <LineSvg className="line_white"></LineSvg>
-
-            <div className="other_div">
-              <div className="other_item">
-                <span className="movie_content">
-                  Release Date:&nbsp; {details.release_date}
+            </div> */}
+            <div className="movie_container">
+              <div className="other_div">
+                <span className="movie_content title overview">
+                  Overview :{" "}
+                </span>
+                <span className="movie_content content_details">
+                  {details.overview}
                 </span>
               </div>
-              <div className="other_item runtime">
-                <span className="movie_content">
-                  Runtime:&nbsp; {details.runtime} minutes
-                </span>
+              <div className="other_div">
+                <span className="movie_content title">Other Details : </span>
+                <div className="other_item">
+                  <span className="movie_content heading">Genre : </span>
+                  {genres.map((genre, i) => (
+                    <span className="movie_content value">{genre.name}</span>
+                  ))}
+                </div>
+                <div className="other_item">
+                  <span className="movie_content heading">Release Date : </span>
+                  <span className="movie_content value">
+                    {details.release_date}
+                  </span>
+                </div>
+                <div className="other_item">
+                  <span className="movie_content heading">Adult : </span>
+                  <span className="movie_content value">
+                    {details.adult === false ? "No" : "Yes"}
+                  </span>
+                </div>
+                <div className="other_item">
+                  <span className="movie_content heading">
+                    Original Language :{" "}
+                  </span>
+                  <span className="movie_content value">
+                    {details.original_language}
+                  </span>
+                </div>
+                <div className="other_item">
+                  <span className="movie_content heading">Popularity : </span>
+                  <span className="movie_content value">
+                    {details.popularity}
+                  </span>
+                </div>
+                <div className="other_item">
+                  <span className="movie_content heading">Runtime : </span>
+                  <span className="movie_content value">
+                    {details.runtime} minutes
+                  </span>
+                </div>
               </div>
             </div>
-            <LineSvg className="line_white"></LineSvg>
           </div>
         </div>
         <div className="cast_container">

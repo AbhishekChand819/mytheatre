@@ -1,10 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export default function Review({ author, authorid, message }) {
-  function sendReviewId() {
-    // history.push(`/review/${item_id}`);
-  }
+export default function ModalReview({ author, authorid, message }) {
   return (
     <div class="wrapper">
       <div class="review">
@@ -25,9 +22,7 @@ export default function Review({ author, authorid, message }) {
           <p>{message}</p>
         </div>
         <div class="read_full" href="#">
-          <span class="profile-info__name" onClick={sendReviewId}>
-            Read Full Review
-          </span>
+          <span class="profile-info__name">Read Full Review</span>
         </div>
       </div>
     </div>

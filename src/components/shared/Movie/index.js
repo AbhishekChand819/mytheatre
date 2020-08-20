@@ -24,9 +24,6 @@ export default function Movie({ text, image, id, item_id, type }) {
         style={{ backgroundImage: `url(${image})` }}
       ></div>
       <span className="movie_name">{text}</span>
-      {/* <span className="about_movie">
-        PG-13 / 2h 49min / Adventure, Drama, Sci-Fi
-      </span> */}
       <div className="row">
         <div className="watch_btn" onClick={handleShow}>
           <h3 className="text">WATCH TRAILER</h3>

@@ -4,6 +4,7 @@ import "./style.css";
 
 import Cast from "../shared/Cast";
 import Movie from "../shared/Movie";
+import Modal from "react-bootstrap/Modal";
 
 import Carousel from "react-bootstrap/Carousel";
 import Review from "../shared/Review";
@@ -109,39 +110,6 @@ export default function MovieDetails() {
           </div>
           <div className="mov_details">
             <span className="movie_title">{details.title}</span>
-
-            {/* <div className="genre_star">
-              <div className="star_container">
-                <span className="movie_genre">Ratings : </span>
-                <div>
-                  <img
-                    alt="play"
-                    style={{ width: "25px" }}
-                    src={require("../../assets/star.svg")}
-                  />
-                  <img
-                    alt="play"
-                    style={{ width: "25px" }}
-                    src={require("../../assets/star.svg")}
-                  />
-                  <img
-                    alt="play"
-                    style={{ width: "25px" }}
-                    src={require("../../assets/star.svg")}
-                  />
-                  <img
-                    alt="play"
-                    style={{ width: "25px" }}
-                    src={require("../../assets/half-star.svg")}
-                  />
-                  <img
-                    alt="play"
-                    style={{ width: "25px" }}
-                    src={require("../../assets/empty-star.svg")}
-                  />
-                </div>
-              </div>
-            </div> */}
             <div className="movie_container">
               <div className="other_div">
                 <span className="movie_content title overview">

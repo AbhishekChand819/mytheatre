@@ -4,6 +4,8 @@ import "./style.css";
 
 import Cast from "../shared/Cast";
 import Movie from "../shared/Movie";
+import Modal from "react-bootstrap/Modal";
+import Trailer from "../shared/Trailer";
 
 import Carousel from "react-bootstrap/Carousel";
 import Review from "../shared/Review";
@@ -18,7 +20,11 @@ export default function MovieDetails() {
   const [genres, setGenres] = useState([]);
   const [cast, setCast] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [show, setShow] = useState(false);
   const [similar, setSimilar] = useState([]);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     axios
@@ -91,9 +97,29 @@ export default function MovieDetails() {
       <div className="main_container">
         <Navbar></Navbar>
         <div className="row_detail">
+          <Modal
+            show={show}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={true}
+            centered
+          >
+            <Modal.Header>
+              <Modal.Title>{details.title}</Modal.Title>
+              <div className="modal_btns">
+                <div className="more_details" onClick={handleClose}>
+                  <h3 className="text">CLOSE</h3>
+                </div>
+              </div>
+            </Modal.Header>
+            <Modal.Body>
+              <Trailer movie={details.title}></Trailer>
+            </Modal.Body>
+          </Modal>
           <div className="mov_image">
             <img
               alt="trailer"
+              onClick={handleShow}
               className="play_trailer"
               src={require("../../assets/play.svg")}
             ></img>

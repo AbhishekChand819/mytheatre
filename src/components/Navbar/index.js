@@ -16,7 +16,10 @@ export default function Navbar() {
           <span className="tab">Upcoming</span>
         </li>
         <li>
-          <span className="tab">Theaters</span>
+          <span className="tab">Trending</span>
+        </li>
+        <li>
+          <span className="tab">TV Shows</span>
         </li>
         <li>
           <SearchBar></SearchBar>

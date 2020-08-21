@@ -1,28 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./style.css";
 
-export default function ModalReview({ author, authorid, message }) {
+export default function ModalReview({ reviewid }) {
+  const [review, setReview] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`https://api.themoviedb.org/3/review/${reviewid}`, {
+        params: {
+          api_key: "1ca7fe3d77a06f7f13d28d6d54898ebf",
+        },
+      })
+      .then((response) => {
+        setReview(response.data);
+      });
+  }, []);
   return (
-    <div class="wrapper">
-      <div class="review">
-        <div class="review-profile">
-          <div class="review-profile__photo" href="#">
+    <div class="modal-wrapper">
+      <div class="modal-review">
+        <div class="modal-review-profile">
+          <div class="modal-review-profile__photo" href="#">
             <img
               alt="profile"
               class="profile-photo__img"
               src="https://pbs.twimg.com/profile_images/631495506770817024/6OX4_2Gq.png"
             ></img>
           </div>
-          <div class="review-profile__info" href="#">
-            <span class="profile-info__name">{author}</span>
-            <span class="profile-info__username">@Cid{authorid}</span>
+          <div class="modal-review-profile__info" href="#">
+            <span class="profile-info__name">{review.author}</span>
+            <span class="profile-info__username">@Cid{review.id}</span>
           </div>
         </div>
-        <div class="review-message">
-          <p>{message}</p>
-        </div>
-        <div class="read_full" href="#">
-          <span class="profile-info__name">Read Full Review</span>
+        <div class="modal-review-message">
+          <p>{review.content}</p>
         </div>
       </div>
     </div>

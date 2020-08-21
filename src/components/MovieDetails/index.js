@@ -4,16 +4,12 @@ import "./style.css";
 
 import Cast from "../shared/Cast";
 import Movie from "../shared/Movie";
-import Modal from "react-bootstrap/Modal";
 
 import Carousel from "react-bootstrap/Carousel";
 import Review from "../shared/Review";
 
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-
-import { ReactComponent as LineSvg } from "../../assets/grey-line.svg";
-
 import { useParams } from "react-router-dom";
 
 export default function MovieDetails() {
@@ -88,8 +84,7 @@ export default function MovieDetails() {
           setSimilar(final);
         })
       );
-  }, []);
-  console.log(details);
+  }, [query]);
 
   return (
     <div>

@@ -10,6 +10,14 @@
   height: max-content;
 }
 
+.castline {
+  width: 91% !important;
+}
+
+.reviewline {
+  width: 86.5% !important;
+}
+
 .mov_details {
   width: 100%;
   margin: auto 100px;
@@ -125,18 +133,22 @@
 }
 
 .cast_container {
-  margin: 50px;
+  margin: 90px auto;
+}
+
+.similar {
+  margin-top: 70px !important;
 }
 
 .review_container {
-  margin: 50px;
-  margin-top: 120px;
+  margin: auto;
+  margin-top: 150px;
 }
 
 .review_main {
   display: flex;
   flex-flow: wrap;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .no_data {

@@ -35,7 +35,7 @@ export default function NowShowing() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" id="now_showing">
       <div className="header">
         <span className="heading">Now Showing</span>
         <img

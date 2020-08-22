@@ -27,6 +27,7 @@ export default function MovieDetails() {
   const handleShow = () => setShow(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     axios
       .all([
         axios.get(`https://api.themoviedb.org/3/movie/${query}`, {
@@ -187,7 +188,7 @@ export default function MovieDetails() {
         <div className="cast_container">
           <span className="heading">Cast</span>
           <img
-            className="line"
+            className="line castline"
             src={require("../../assets/line.svg")}
             alt="line"
           />
@@ -216,7 +217,7 @@ export default function MovieDetails() {
           <div className="review_container">
             <span className="heading">Reviews</span>
             <img
-              className="line"
+              className="line reviewline"
               src={require("../../assets/line.svg")}
               alt="line"
             />
@@ -238,7 +239,7 @@ export default function MovieDetails() {
         ) : (
           ""
         )}
-        <div className="container">
+        <div className="container similar">
           <div className="header">
             <span className="heading">Similar Movies</span>
             <img

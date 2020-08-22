@@ -19,7 +19,7 @@ export default function Review({ author, authorid, message }) {
             <img
               alt="profile"
               class="profile-photo__img"
-              src="https://pbs.twimg.com/profile_images/631495506770817024/6OX4_2Gq.png"
+              src={require("../../../assets/user.png")}
             ></img>
           </div>
           <div class="review-profile__info" href="#">

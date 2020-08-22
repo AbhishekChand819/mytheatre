@@ -56,6 +56,7 @@
 }
 
 .review-message p {
+  height: 110px;
   overflow: hidden;
   width: 100%;
   display: -webkit-box;

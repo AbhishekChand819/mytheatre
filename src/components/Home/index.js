@@ -1,5 +1,4 @@
 import React from "react";
-import "./Style.css";
 import Navbar from "../Navbar";
 import Gallery from "../Gallery";
 import NowShowing from "../NowShowing";

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./style.css";
 
 import Cast from "../shared/Cast";
 import Movie from "../shared/Movie";

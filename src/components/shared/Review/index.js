@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
-import "./style.css";
-
 import Modal from "react-bootstrap/Modal";
 import ModalReview from "../ModalReview";
-
+import { Scrollbars } from "react-custom-scrollbars";
 export default function Review({ author, authorid, message }) {
   const [show, setShow] = useState(false);
 
@@ -36,6 +34,7 @@ export default function Review({ author, authorid, message }) {
           </span>
         </div>
       </div>
+
       <Modal
         show={show}
         onHide={handleClose}

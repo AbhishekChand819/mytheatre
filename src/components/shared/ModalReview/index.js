@@ -13,7 +13,7 @@ export default function ModalReview({ reviewid }) {
       .then((response) => {
         setReview(response.data);
       });
-  }, []);
+  }, [reviewid]);
   return (
     <div class="modal-wrapper">
       <div class="modal-review">

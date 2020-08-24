@@ -56,7 +56,6 @@ export default function TvDetails() {
       .then(
         axios.spread((data1, data2, data3, data4) => {
           setDetails(data1.data);
-          console.log(data1.data);
           setGenres(data1.data.genres);
           setReviews(data4.data.results);
           let arr = [];

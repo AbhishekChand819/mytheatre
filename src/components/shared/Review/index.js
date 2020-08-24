@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Modal from "react-bootstrap/Modal";
 import ModalReview from "../ModalReview";
-import { Scrollbars } from "react-custom-scrollbars";
 export default function Review({ author, authorid, message }) {
   const [show, setShow] = useState(false);
 

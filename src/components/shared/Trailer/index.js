@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 
 export default function Trailer({ movie }) {
   var width, height;
-  if (window.innerWidth == 1366) {
+  if (window.innerWidth === 1366) {
     width = "1000px";
     height = "504px";
   } else {

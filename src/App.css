@@ -1474,6 +1474,9 @@ html {
     top: 34px;
     width: 60px;
   }
+  .movie_img {
+    margin-top: 100px;
+  }
   .image1 {
     right: 25%;
     width: 300px;
@@ -1487,7 +1490,7 @@ html {
     height: 440px;
   }
   .movie_details {
-    margin-top: 0px;
+    margin-top: 40px;
   }
   .name {
     font-size: 23px;
@@ -1510,15 +1513,93 @@ html {
   }
   .react-slideshow-container .nav {
     width: 40px;
+    top: 78%;
   }
   .previous {
-    left: 12%;
+    left: 12.3%;
   }
   .next {
-    left: 15%;
-    margin-left: 25px;
+    margin-left: 15px;
   }
   .react-slideshow-wrapper .images-wrap {
     height: 500px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+  .container {
+    margin-top: 90px;
+  }
+  .movie_box {
+    width: 200px;
+  }
+  .movie-img {
+    height: 250px;
+  }
+  .watch_btn,
+  .more_details {
+    padding: 2px;
+  }
+  .text {
+    font-size: 8.5px;
+  }
+  .movie_name {
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+  .row {
+    margin: 5px auto;
+    margin-bottom: 10px;
+  }
+  .line3 {
+    width: 66.9%;
+  }
+  .main_area {
+    margin-top: 90px;
+  }
+  .grids {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+  .card,
+  .card__side {
+    height: 20rem;
+  }
+  .text-box-middle {
+    font-size: 2.9rem;
+  }
+  .header.trending {
+    margin-bottom: 40px;
+  }
+  .toptv {
+    margin-top: 50px;
+  }
+  .main_footer {
+    margin: 30px auto;
+  }
+  .list {
+    padding-left: 120px;
+  }
+  .list li:first-child {
+    font-size: 22px;
+  }
+  .list li:nth-child(2),
+  .list li:nth-child(3),
+  .list li:nth-child(4) {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .copyright {
+    margin: 10px auto 40px auto;
+  }
+  .modal {
+    top: 0;
+    left: 14%;
+  }
+  .modal-title {
+    font-size: 22px;
+  }
+  .modal_btns .text {
+    font-size: 12px !important;
   }
 }

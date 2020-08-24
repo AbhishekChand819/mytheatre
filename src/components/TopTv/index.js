@@ -37,7 +37,7 @@ export default function TopTv() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container toptv">
       <div className="header">
         <span className="heading">Top TV Shows</span>
         <img

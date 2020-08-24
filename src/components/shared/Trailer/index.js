@@ -5,6 +5,14 @@ import React from "react";
 import ReactPlayer from "react-player";
 
 export default function Trailer({ movie }) {
+  var width, height;
+  if (window.innerWidth == 1366) {
+    width = "1000px";
+    height = "504px";
+  } else {
+    width = "1200px";
+    height = "704px";
+  }
   // const [link, setLink] = useState("");
   //   useEffect(() => {
   //     axios
@@ -26,8 +34,8 @@ export default function Trailer({ movie }) {
       url="https://youtu.be/luai0p0y2zE"
       controls
       playbackRate={1}
-      width="1200px"
-      height="704px"
+      width={width}
+      height={height}
     />
   );
 }

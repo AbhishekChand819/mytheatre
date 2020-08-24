@@ -36,6 +36,7 @@ export default function Review({ author, authorid, message }) {
       </div>
 
       <Modal
+        className="review_modal"
         show={show}
         onHide={handleClose}
         backdrop="static"

@@ -242,32 +242,36 @@ export default function TvDetails() {
         ) : (
           ""
         )}
-        <div className="container similar">
-          <div className="header">
-            <span className="heading">Similar TV Shows</span>
-            <img
-              className="line similartv"
-              src={require("../../assets/line.svg")}
-              alt="line"
-            />
+        {similar.length !== 0 ? (
+          <div className="container similar">
+            <div className="header">
+              <span className="heading">Similar TV Shows</span>
+              <img
+                className="line similartv"
+                src={require("../../assets/line.svg")}
+                alt="line"
+              />
+            </div>
+            <Carousel>
+              {similar.map((shows, i) => (
+                <Carousel.Item key={i}>
+                  {shows.map((show, j) => (
+                    <Movie
+                      id={j}
+                      key={show.id}
+                      item_id={show.id}
+                      text={show.title}
+                      type="tv"
+                      image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
+                    />
+                  ))}
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </div>
-          <Carousel>
-            {similar.map((shows, i) => (
-              <Carousel.Item key={i}>
-                {shows.map((show, j) => (
-                  <Movie
-                    id={j}
-                    key={show.id}
-                    item_id={show.id}
-                    text={show.title}
-                    type="tv"
-                    image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`}
-                  />
-                ))}
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
       <Footer></Footer>
     </div>

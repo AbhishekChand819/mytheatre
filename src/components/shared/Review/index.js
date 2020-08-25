@@ -48,7 +48,11 @@ export default function Review({ author, authorid, message }) {
               <h3 className="text">CLOSE</h3>
             </div>
           </div>
-          <ModalReview reviewid={authorid}></ModalReview>
+          <ModalReview
+            reviewid={authorid}
+            reviewauthor={author}
+            reviewmsg={message}
+          ></ModalReview>
         </Modal.Body>
       </Modal>
     </div>

@@ -1645,3 +1645,252 @@ html {
     width: 79%;
   }
 }
+
+@media only screen and (max-width: 1600px) {
+  .main_container {
+    margin: 60px 140px;
+  }
+  .home {
+    font-size: 32px;
+  }
+  .main li:first-child {
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+  .main li:nth-child(2),
+  .main li:nth-child(3),
+  .main li:nth-child(4) {
+    margin-top: 5px;
+  }
+  .tab {
+    font-size: 22px;
+    margin: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .search_icon {
+    left: 350px;
+    top: 8px;
+    width: 20px;
+  }
+  .search_bar {
+    font-size: 17px;
+    height: 35px;
+    width: 340px;
+    float: right;
+  }
+  .play {
+    left: 26%;
+    top: 74px;
+    width: 65px;
+  }
+  .movie_img {
+    margin-top: 120px;
+  }
+  .image1 {
+    right: 25%;
+    width: 300px;
+    height: 300px;
+    top: -30px;
+  }
+  .image2 {
+    width: 200px;
+    top: -435px;
+    left: 36%;
+    height: 540px;
+  }
+  .movie_details {
+    margin-top: 60px;
+  }
+  .name {
+    font-size: 28px;
+    line-height: 23px;
+  }
+  .genre {
+    font-size: 20px;
+  }
+  .details {
+    font-size: 21px;
+    width: 32%;
+    padding: 6px 0;
+    -webkit-line-clamp: 5;
+  }
+  .book_btn {
+    height: 50px;
+    font-size: 20px;
+    width: 155px;
+    margin: 0px;
+  }
+  .react-slideshow-container .nav {
+    width: 50px;
+    top: 600px;
+  }
+  .previous {
+    left: 12%;
+  }
+  .next {
+    margin-left: 20px;
+  }
+  .react-slideshow-wrapper .images-wrap {
+    height: 600px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .container {
+    margin-top: 90px;
+  }
+  .movie_box {
+    width: 245px;
+    margin-right: 12px;
+  }
+  .movie-img {
+    height: 320px;
+  }
+  .watch_btn,
+  .more_details {
+    padding: 2px;
+  }
+  .text {
+    font-size: 11.5px;
+  }
+  .movie_name {
+    margin-bottom: 5px;
+    font-size: 19px;
+  }
+  .row {
+    margin: 5px auto;
+    margin-bottom: 10px;
+  }
+  .line3 {
+    width: 66.9%;
+  }
+  .main_area {
+    margin-top: 90px;
+  }
+  .grids {
+    grid-column-gap: 2.2rem;
+    grid-row-gap: 2.2rem;
+  }
+  .card,
+  .card__side {
+    height: 22rem;
+  }
+  .text-box-middle {
+    font-size: 3.2rem;
+  }
+  .header.trending {
+    margin-bottom: 50px;
+  }
+  .toptv {
+    margin-top: 60px;
+  }
+  .main_footer {
+    margin: 30px auto;
+  }
+  .list {
+    padding-left: 115px !important;
+  }
+  .list li:first-child {
+    font-size: 25px;
+  }
+  .list li:nth-child(2),
+  .list li:nth-child(3),
+  .list li:nth-child(4) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .copyright {
+    margin: 10px auto 40px auto;
+  }
+  .modal {
+    top: 0;
+    left: 14%;
+  }
+  .modal-title {
+    font-size: 25px;
+  }
+  .modal_btns .text {
+    font-size: 14px !important;
+    padding: 7px;
+  }
+  .heading.search {
+    font-size: 25px;
+  }
+  .poster {
+    height: 550px;
+  }
+  .play_trailer {
+    width: 65px;
+    top: 46%;
+    left: 24%;
+  }
+  .movie_title {
+    font-size: 30px;
+  }
+  .other_div {
+    padding-top: 20px;
+  }
+  .movie_content.title {
+    font-size: 22px;
+  }
+  .row_detail {
+    margin: 100px 90px;
+  }
+  .mov_details {
+    margin-right: 0;
+    margin-left: 60px !important;
+  }
+  .movie_content {
+    font-size: 20px;
+    -webkit-line-clamp: 5;
+    line-height: 34px;
+  }
+  .cast_container {
+    margin: 0px auto;
+  }
+  .review_container {
+    margin-top: 100px;
+  }
+  .wrapper {
+    max-width: 380px;
+  }
+  .review {
+    padding: 1.2rem;
+    font-size: 15px;
+  }
+  .review-message p {
+    height: 60px;
+    -webkit-line-clamp: 3;
+  }
+  .review .review-profile .review-profile__photo {
+    width: 60px;
+  }
+  .review .review-profile .review-profile__photo .profile-photo__img {
+    width: 40px;
+    height: 40px;
+  }
+  .profile-info__name {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .review_modal {
+    left: 16% !important;
+  }
+  .modal-review {
+    width: 1000px;
+  }
+  .modal-review-message p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .modal_btns.reviewmodal {
+    right: 4%;
+  }
+  .similar {
+    margin-top: 40px !important;
+  }
+  .line {
+    width: 79%;
+  }
+}

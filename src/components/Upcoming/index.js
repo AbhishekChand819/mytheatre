@@ -20,21 +20,39 @@ export default function Upcoming() {
         },
       })
       .then((response) => {
-        let arr = [];
-        let final = [];
-        let start = 0;
-        let end = 5;
-        let size = response.data.results.length / 5;
-        for (let i = 0; i < size; i++) {
-          for (var j = start; j < end; j++) {
-            arr.push(response.data.results[j]);
+        if (window.innerWidth < 600) {
+          let arr = [];
+          let final = [];
+          let start = 0;
+          let end = 2;
+          let size = response.data.results.length / 2;
+          for (let i = 0; i < size; i++) {
+            for (let j = start; j < end; j++) {
+              arr.push(response.data.results[j]);
+            }
+            final.push(arr);
+            arr = [];
+            start += 2;
+            end += 2;
           }
-          final.push(arr);
-          arr = [];
-          start += 5;
-          end += 5;
+          setUpcoming(final);
+        } else {
+          let arr = [];
+          let final = [];
+          let start = 0;
+          let end = 5;
+          let size = response.data.results.length / 5;
+          for (let i = 0; i < size; i++) {
+            for (let j = start; j < end; j++) {
+              arr.push(response.data.results[j]);
+            }
+            final.push(arr);
+            arr = [];
+            start += 5;
+            end += 5;
+          }
+          setUpcoming(final);
         }
-        setUpcoming(final);
       });
   }, []);
 

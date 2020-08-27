@@ -2234,3 +2234,248 @@ html {
     width: 79%;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .main_container {
+    margin: 20px;
+  }
+  .home {
+    font-size: 32px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .main li:first-child {
+    display: none;
+  }
+  .main li:nth-child(2),
+  .main li:nth-child(3),
+  .main li:nth-child(4) {
+    display: none;
+  }
+  .search_icon {
+    left: 405px;
+    top: -30px;
+    width: 20px;
+  }
+  .search_bar {
+    margin-top: 10px;
+    font-size: 17px;
+    height: 35px;
+    width: 410px;
+    float: right;
+  }
+  .play {
+    left: 35%;
+    top: 30px;
+    width: 65px;
+  }
+  .movie_img {
+    margin-top: 120px;
+  }
+  .image1 {
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    top: -90px;
+  }
+  .image2 {
+    top: -455px;
+    left: 45.5%;
+    height: 460px;
+  }
+  .slide1 {
+    left: 20% !important;
+  }
+  .slide2 {
+    left: 40% !important;
+  }
+  .slide3 {
+    left: 60% !important;
+  }
+  .movie_details {
+    display: none;
+  }
+  .react-slideshow-container .nav {
+    width: 50px;
+    top: 615px;
+  }
+  .previous {
+    left: 5%;
+  }
+  .next {
+    margin-left: 20px;
+  }
+  .react-slideshow-wrapper .images-wrap {
+    height: 600px;
+  }
+  .react-slideshow-wrapper.slide {
+    top: 50px;
+    position: relative;
+  }
+  .heading {
+    padding-left: 15px;
+    font-size: 30px;
+  }
+  .container {
+    margin-top: 50px;
+  }
+  .line,
+  .line.trend,
+  .line2,
+  .line3,
+  .line_white {
+    width: 0px !important;
+  }
+  .movie_box {
+    width: 200px;
+    margin-right: 12px;
+  }
+  .movie-img {
+    width: 200px;
+    height: 280px;
+  }
+  .watch_btn,
+  .more_details {
+    padding: 0px;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .movie_name {
+    margin-bottom: 5px;
+    font-size: 19px;
+  }
+  .row {
+    margin: 5px auto;
+    margin-bottom: 10px;
+  }
+  .grids {
+    grid-column-gap: 2rem;
+    grid-row-gap: rem;
+  }
+  .card,
+  .card__side {
+    height: 16rem;
+  }
+  .text-box-middle {
+    font-size: 2.1rem;
+  }
+  .header.trending {
+    margin-bottom: 20px;
+  }
+  .toptv {
+    margin-top: 60px;
+  }
+  .main_footer {
+    display: none;
+  }
+  .copyright {
+    margin: 10px auto 40px auto;
+  }
+  .modal {
+    top: 0;
+    left: 14%;
+  }
+  .modal-title {
+    font-size: 25px;
+  }
+  .modal_btns .text {
+    font-size: 14px !important;
+    padding: 7px;
+  }
+  .srch_main {
+    margin-top: 10px;
+  }
+  .srch_main .movie_box {
+    width: 209px;
+    margin: 10px 6px !important;
+  }
+  .srch_main .movie-img {
+    width: 209px;
+  }
+  .heading.search {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+  .poster {
+    height: 550px;
+  }
+  .play_trailer {
+    width: 65px;
+    top: 46%;
+    left: 24%;
+  }
+  .movie_title {
+    font-size: 30px;
+  }
+  .other_div {
+    padding-top: 20px;
+  }
+  .movie_content.title {
+    font-size: 22px;
+  }
+  .row_detail {
+    margin: 100px 90px;
+  }
+  .mov_details {
+    margin-right: 0;
+    margin-left: 60px !important;
+  }
+  .movie_content {
+    font-size: 20px;
+    -webkit-line-clamp: 5;
+    line-height: 34px;
+  }
+  .cast_container {
+    margin: 0px auto;
+  }
+  .review_container {
+    margin-top: 100px;
+  }
+  .wrapper {
+    max-width: 380px;
+  }
+  .review {
+    padding: 1.2rem;
+    font-size: 15px;
+  }
+  .review-message p {
+    height: 60px;
+    -webkit-line-clamp: 3;
+  }
+  .review .review-profile .review-profile__photo {
+    width: 60px;
+  }
+  .review .review-profile .review-profile__photo .profile-photo__img {
+    width: 40px;
+    height: 40px;
+  }
+  .profile-info__name {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .review_modal {
+    left: 16% !important;
+  }
+  .modal-review {
+    width: 1000px;
+  }
+  .modal-review-message p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .modal_btns.reviewmodal {
+    right: 4%;
+  }
+  .similar {
+    margin-top: 40px !important;
+  }
+  .line {
+    width: 79%;
+  }
+}

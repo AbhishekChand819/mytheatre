@@ -47,6 +47,7 @@ export default function SearchResult() {
                       <Movie
                         key={show.id}
                         text={show.title}
+                        id={j}
                         item_id={show.id}
                         type={show.media_type}
                         image={`http://image.tmdb.org/t/p/w600_and_h900_bestv2/${image}`}
@@ -56,6 +57,7 @@ export default function SearchResult() {
                     return (
                       <Movie
                         key={show.id}
+                        id={j}
                         text={show.original_name}
                         item_id={show.id}
                         type={show.media_type}

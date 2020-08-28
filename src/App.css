@@ -1700,14 +1700,14 @@ html {
   }
   .movie_name {
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 20px;
   }
   .poster {
     height: 500px;
   }
   .play_trailer {
     width: 60px;
-    top: 55%;
+    top: 46%;
     left: 26%;
   }
   .movie_title {
@@ -1715,6 +1715,9 @@ html {
   }
   .other_div {
     padding-top: 15px;
+  }
+  .text-box-middle {
+    font-size: 2.8rem;
   }
   .movie_content.title {
     font-size: 20px;
@@ -1761,7 +1764,7 @@ html {
     font-size: 14.5px;
   }
   .review_modal {
-    left: 16% !important;
+    left: 8.5% !important;
   }
   .modal-review {
     width: 1000px;
@@ -1778,6 +1781,9 @@ html {
   }
   .line {
     width: 79%;
+  }
+  .modal {
+    left: 8%;
   }
   .list {
     padding-left: 105px !important;
@@ -1951,7 +1957,7 @@ html {
   }
   .modal {
     top: 0;
-    left: 14%;
+    left: 12%;
   }
   .modal-title {
     font-size: 22px;
@@ -1967,7 +1973,7 @@ html {
   }
   .play_trailer {
     width: 55px;
-    top: 52%;
+    top: 45%;
     left: 22.5%;
   }
   .movie_title {
@@ -2479,6 +2485,12 @@ html {
   }
   .cast_container {
     margin: 0px auto;
+  }
+  .main_container .carousel-inner {
+    left: 18px;
+  }
+  .main_container .carousel-control-prev {
+    left: -6%;
   }
   .review_container {
     margin-top: 40px;

@@ -22,16 +22,16 @@ export default function TopTv() {
           let arr = [];
           let final = [];
           let start = 0;
-          let end = 2;
-          let size = response.data.results.length / 2;
+          let end = 1;
+          let size = response.data.results.length / 1;
           for (let i = 0; i < size; i++) {
             for (let j = start; j < end; j++) {
               arr.push(response.data.results[j]);
             }
             final.push(arr);
             arr = [];
-            start += 2;
-            end += 2;
+            start += 1;
+            end += 1;
           }
           setTopTv(final);
         } else {

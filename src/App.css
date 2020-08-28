@@ -2255,15 +2255,15 @@ html {
     display: none;
   }
   .search_icon {
-    left: 405px;
-    top: -30px;
+    left: 300px;
+    top: -29px;
     width: 20px;
   }
   .search_bar {
     margin-top: 10px;
     font-size: 17px;
     height: 35px;
-    width: 100px;
+    width: 305px;
     float: right;
   }
   .play {
@@ -2282,8 +2282,8 @@ html {
   }
   .image2 {
     top: -455px;
-    left: 45.5%;
-    height: 460px;
+    left: 22.9%;
+    height: 400px;
   }
   .slide1 {
     left: 20% !important;

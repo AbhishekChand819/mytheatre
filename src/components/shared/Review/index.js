@@ -34,27 +34,51 @@ export default function Review({ author, authorid, message }) {
         </div>
       </div>
 
-      <Modal
-        className="review_modal"
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={true}
-        style={{ left: "8%", top: "5%", height: "90%" }}
-      >
-        <Modal.Body>
-          <div className="modal_btns reviewmodal">
-            <div className="more_details" onClick={handleClose}>
-              <h3 className="text">CLOSE</h3>
+      {window.innerWidth < 500 ? (
+        <Modal
+          className="review_modal"
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={true}
+          style={{ left: "8%", top: "5%", height: "90%" }}
+        >
+          <Modal.Body>
+            <div className="modal_btns reviewmodal">
+              <div className="more_details" onClick={handleClose}>
+                <h3 className="text">CLOSE</h3>
+              </div>
             </div>
-          </div>
-          <ModalReview
-            reviewid={authorid}
-            reviewauthor={author}
-            reviewmsg={message}
-          ></ModalReview>
-        </Modal.Body>
-      </Modal>
+            <ModalReview
+              reviewid={authorid}
+              reviewauthor={author}
+              reviewmsg={message}
+            ></ModalReview>
+          </Modal.Body>
+        </Modal>
+      ) : (
+        <Modal
+          className="review_modal"
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={true}
+          style={{ left: "8%", top: "5%", height: "90%" }}
+        >
+          <Modal.Body>
+            <div className="modal_btns reviewmodal">
+              <div className="more_details" onClick={handleClose}>
+                <h3 className="text">CLOSE</h3>
+              </div>
+            </div>
+            <ModalReview
+              reviewid={authorid}
+              reviewauthor={author}
+              reviewmsg={message}
+            ></ModalReview>
+          </Modal.Body>
+        </Modal>
+      )}
     </div>
   );
 }

@@ -9,6 +9,9 @@ export default function Trailer({ movie }) {
   if (window.innerWidth === 1366) {
     width = "1000px";
     height = "504px";
+  } else if (window.innerWidth < 500) {
+    width = "320px";
+    height = "404px";
   } else {
     width = "1200px";
     height = "704px";

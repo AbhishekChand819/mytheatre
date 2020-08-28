@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 export default function Movie({ text, image, id, item_id, type }) {
   const [show, setShow] = useState(false);
   const history = useHistory();
-
   function handleClick() {
     history.push(`/${type}/${item_id}`);
   }
@@ -39,26 +38,53 @@ export default function Movie({ text, image, id, item_id, type }) {
         keyboard={true}
         centered
       >
-        <Modal.Header>
-          <Modal.Title>{text}</Modal.Title>
-          <div className="modal_btns">
-            <div
-              className="watch_btn"
-              onClick={() => {
-                handleShow();
-                handleClick();
-              }}
-            >
-              <h3 className="text">MORE DETAILS</h3>
-            </div>
-            <div className="more_details" onClick={handleClose}>
-              <h3 className="text">CLOSE</h3>
-            </div>
-          </div>
-        </Modal.Header>
-        <Modal.Body>
-          <Trailer movie={text}></Trailer>
-        </Modal.Body>
+        {window.innerWidth < 500 ? (
+          <>
+            <Modal.Header>
+              <Modal.Title>{text}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Trailer movie={text}></Trailer>
+              <div className="modal_btns">
+                <div
+                  className="watch_btn"
+                  onClick={() => {
+                    handleShow();
+                    handleClick();
+                  }}
+                >
+                  <h3 className="text">MORE DETAILS</h3>
+                </div>
+                <div className="more_details" onClick={handleClose}>
+                  <h3 className="text">CLOSE</h3>
+                </div>
+              </div>
+            </Modal.Body>
+          </>
+        ) : (
+          <>
+            <Modal.Header>
+              <Modal.Title>{text}</Modal.Title>
+              <div className="modal_btns">
+                <div
+                  className="watch_btn"
+                  onClick={() => {
+                    handleShow();
+                    handleClick();
+                  }}
+                >
+                  <h3 className="text">MORE DETAILS</h3>
+                </div>
+                <div className="more_details" onClick={handleClose}>
+                  <h3 className="text">CLOSE</h3>
+                </div>
+              </div>
+            </Modal.Header>
+            <Modal.Body>
+              <Trailer movie={text}></Trailer>
+            </Modal.Body>
+          </>
+        )}
       </Modal>
     </div>
   );

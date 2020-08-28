@@ -31,26 +31,53 @@ export default function SlideMovie({
         keyboard={true}
         centered
       >
-        <Modal.Header>
-          <Modal.Title>{title}</Modal.Title>
-          <div className="modal_btns">
-            <div
-              className="watch_btn"
-              onClick={() => {
-                handleShow();
-                handleClick();
-              }}
-            >
-              <h3 className="text">MORE DETAILS</h3>
-            </div>
-            <div className="more_details" onClick={handleClose}>
-              <h3 className="text">CLOSE</h3>
-            </div>
-          </div>
-        </Modal.Header>
-        <Modal.Body>
-          <Trailer movie={title}></Trailer>
-        </Modal.Body>
+        {window.innerWidth < 500 ? (
+          <>
+            <Modal.Header>
+              <Modal.Title>{title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Trailer movie={title}></Trailer>
+              <div className="modal_btns">
+                <div
+                  className="watch_btn"
+                  onClick={() => {
+                    handleShow();
+                    handleClick();
+                  }}
+                >
+                  <h3 className="text">MORE DETAILS</h3>
+                </div>
+                <div className="more_details" onClick={handleClose}>
+                  <h3 className="text">CLOSE</h3>
+                </div>
+              </div>
+            </Modal.Body>
+          </>
+        ) : (
+          <>
+            <Modal.Header>
+              <Modal.Title>{title}</Modal.Title>
+              <div className="modal_btns">
+                <div
+                  className="watch_btn"
+                  onClick={() => {
+                    handleShow();
+                    handleClick();
+                  }}
+                >
+                  <h3 className="text">MORE DETAILS</h3>
+                </div>
+                <div className="more_details" onClick={handleClose}>
+                  <h3 className="text">CLOSE</h3>
+                </div>
+              </div>
+            </Modal.Header>
+            <Modal.Body>
+              <Trailer movie={title}></Trailer>
+            </Modal.Body>
+          </>
+        )}
       </Modal>
       <div className="movie_details">
         <span className="genre">Action</span>

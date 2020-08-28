@@ -58,36 +58,69 @@ export default function MovieDetails() {
           setDetails(data1.data);
           setGenres(data1.data.genres);
           setReviews(data4.data.results);
-          let arr = [];
-          let final = [];
-          let start = 0;
-          let end = 5;
-          let size = data2.data.cast.length / 5;
-          for (let i = 0; i < size; i++) {
-            for (let j = start; j < end; j++) {
-              arr.push(data2.data.cast[j]);
+          if (window.innerWidth < 500) {
+            let arr = [];
+            let final = [];
+            let start = 0;
+            let end = 1;
+            let size = data2.data.cast.length / 1;
+            for (let i = 0; i < size; i++) {
+              for (let j = start; j < end; j++) {
+                arr.push(data2.data.cast[j]);
+              }
+              final.push(arr);
+              arr = [];
+              start += 1;
+              end += 1;
             }
-            final.push(arr);
+            setCast(final);
             arr = [];
-            start += 5;
-            end += 5;
-          }
-          setCast(final);
-          arr = [];
-          final = [];
-          start = 0;
-          end = 5;
-          size = data3.data.results.length / 5;
-          for (let i = 0; i < size; i++) {
-            for (let j = start; j < end; j++) {
-              arr.push(data3.data.results[j]);
+            final = [];
+            start = 0;
+            end = 1;
+            size = data3.data.results.length / 1;
+            for (let i = 0; i < size; i++) {
+              for (let j = start; j < end; j++) {
+                arr.push(data3.data.results[j]);
+              }
+              final.push(arr);
+              arr = [];
+              start += 1;
+              end += 1;
             }
-            final.push(arr);
+            setSimilar(final);
+          } else {
+            let arr = [];
+            let final = [];
+            let start = 0;
+            let end = 5;
+            let size = data2.data.cast.length / 5;
+            for (let i = 0; i < size; i++) {
+              for (let j = start; j < end; j++) {
+                arr.push(data2.data.cast[j]);
+              }
+              final.push(arr);
+              arr = [];
+              start += 5;
+              end += 5;
+            }
+            setCast(final);
             arr = [];
-            start += 5;
-            end += 5;
+            final = [];
+            start = 0;
+            end = 5;
+            size = data3.data.results.length / 5;
+            for (let i = 0; i < size; i++) {
+              for (let j = start; j < end; j++) {
+                arr.push(data3.data.results[j]);
+              }
+              final.push(arr);
+              arr = [];
+              start += 5;
+              end += 5;
+            }
+            setSimilar(final);
           }
-          setSimilar(final);
         })
       );
   }, [query]);
@@ -104,17 +137,35 @@ export default function MovieDetails() {
             keyboard={true}
             centered
           >
-            <Modal.Header>
-              <Modal.Title>{details.title}</Modal.Title>
-              <div className="modal_btns">
-                <div className="more_details" onClick={handleClose}>
-                  <h3 className="text">CLOSE</h3>
-                </div>
-              </div>
-            </Modal.Header>
-            <Modal.Body>
-              <Trailer movie={details.title}></Trailer>
-            </Modal.Body>
+            {window.innerWidth < 500 ? (
+              <>
+                <Modal.Header>
+                  <Modal.Title>{details.title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <Trailer movie={details.title}></Trailer>
+                  <div className="modal_btns">
+                    <div className="more_details" onClick={handleClose}>
+                      <h3 className="text">CLOSE</h3>
+                    </div>
+                  </div>
+                </Modal.Body>
+              </>
+            ) : (
+              <>
+                <Modal.Header>
+                  <Modal.Title>{details.title}</Modal.Title>
+                  <div className="modal_btns">
+                    <div className="more_details" onClick={handleClose}>
+                      <h3 className="text">CLOSE</h3>
+                    </div>
+                  </div>
+                </Modal.Header>
+                <Modal.Body>
+                  <Trailer movie={details.title}></Trailer>
+                </Modal.Body>
+              </>
+            )}
           </Modal>
           <div className="mov_image">
             <img

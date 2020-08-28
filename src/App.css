@@ -1212,12 +1212,6 @@ html {
   margin-top: 150px;
 }
 
-.review_main {
-  display: flex;
-  flex-flow: wrap;
-  margin-top: 20px;
-}
-
 .no_data {
   font-family: Montserrat;
   font-weight: 400;
@@ -2359,8 +2353,10 @@ html {
     margin-bottom: 10px;
   }
   .grids {
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+    grid-row-gap: 2rem;
+  }
+  .card {
+    width: 300px;
   }
   .card,
   .card__side {
@@ -2392,10 +2388,19 @@ html {
   }
   .modal {
     top: 0;
-    left: 14%;
+    left: 5%;
+  }
+  .modal-content {
+    background-color: #00288f;
+    padding: 10px;
   }
   .modal-title {
-    font-size: 25px;
+    font-size: 20px;
+    width: 300px;
+  }
+  .modal_btns {
+    margin-top: 10px;
+    float: right;
   }
   .modal_btns .text {
     font-size: 14px !important;
@@ -2432,39 +2437,51 @@ html {
     padding-left: 0px;
   }
   .poster {
-    height: 550px;
+    width: 250px;
+    height: 380px;
+  }
+  .mov_image {
+    width: 250px;
+    height: 380px;
+  }
+  .row_detail {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
   }
   .play_trailer {
-    width: 65px;
-    top: 46%;
-    left: 24%;
+    width: 50px;
+    top: 45%;
+    left: 33%;
   }
   .movie_title {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  .other_item .heading {
+    padding: 0px !important;
   }
   .other_div {
     padding-top: 20px;
   }
-  .movie_content.title {
-    font-size: 22px;
+  .cast_container .movie_box {
+    height: 390px;
   }
-  .row_detail {
-    margin: 100px 90px;
+  .movie_content.title {
+    font-size: 18px;
   }
   .mov_details {
-    margin-right: 0;
-    margin-left: 60px !important;
+    margin: 20px 0px 0px 0px !important;
   }
   .movie_content {
-    font-size: 20px;
+    font-size: 14.5px;
     -webkit-line-clamp: 5;
-    line-height: 34px;
+    line-height: 30px;
   }
   .cast_container {
     margin: 0px auto;
   }
   .review_container {
-    margin-top: 100px;
+    margin-top: 40px;
   }
   .wrapper {
     max-width: 380px;
@@ -2489,22 +2506,46 @@ html {
     font-size: 16px;
   }
   .review_modal {
-    left: 16% !important;
+    left: 2% !important;
+  }
+  .review_modal .modal-wrapper {
+    padding: 0px;
+  }
+  .review_main {
+    margin-top: 0px;
+  }
+  .read_full {
+    left: 52%;
   }
   .modal-review {
-    width: 1000px;
+    width: 300px;
+  }
+  .modal-review .modal-review-profile {
+    padding-top: 20px;
   }
   .modal-review-message p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
   }
   .modal_btns.reviewmodal {
-    right: 4%;
+    right: 9%;
+    top: 10px;
   }
   .similar {
     margin-top: 40px !important;
   }
   .line {
     width: 79%;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    grid-column: 1;
+  }
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7 {
+    display: none;
   }
 }

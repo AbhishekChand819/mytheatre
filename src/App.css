@@ -1048,8 +1048,8 @@ html {
 .play_trailer {
   width: 70px;
   position: absolute;
-  top: 46%;
-  left: 20.5%;
+  top: 44%;
+  left: 23.5%;
   z-index: 1;
   cursor: pointer;
   transition: all 0.8s ease;

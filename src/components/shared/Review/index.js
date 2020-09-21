@@ -9,26 +9,26 @@ export default function Review({ author, authorid, message }) {
   const handleShow = () => setShow(true);
 
   return (
-    <div class="wrapper">
-      <div class="review">
-        <div class="review-profile">
-          <div class="review-profile__photo" href="#">
+    <div className="wrapper">
+      <div className="review">
+        <div className="review-profile">
+          <div className="review-profile__photo" href="#">
             <img
               alt="profile"
-              class="profile-photo__img"
+              className="profile-photo__img"
               src={require("../../../assets/user.png")}
             ></img>
           </div>
-          <div class="review-profile__info" href="#">
-            <span class="profile-info__name">{author}</span>
-            <span class="profile-info__username">@Cid{authorid}</span>
+          <div className="review-profile__info" href="#">
+            <span className="profile-info__name">{author}</span>
+            <span className="profile-info__username">@Cid{authorid}</span>
           </div>
         </div>
-        <div class="review-message">
+        <div className="review-message">
           <p>{message}</p>
         </div>
-        <div class="read_full" href="#">
-          <span class="profile-info__name" onClick={handleShow}>
+        <div className="read_full" href="#">
+          <span className="profile-info__name" onClick={handleShow}>
             Read Full Review
           </span>
         </div>
@@ -36,7 +36,7 @@ export default function Review({ author, authorid, message }) {
 
       {window.innerWidth < 500 ? (
         <Modal
-          className="review_modal"
+          classNameName="review_modal"
           show={show}
           onHide={handleClose}
           backdrop="static"
@@ -44,9 +44,9 @@ export default function Review({ author, authorid, message }) {
           style={{ left: "8%", top: "5%", height: "90%" }}
         >
           <Modal.Body>
-            <div className="modal_btns reviewmodal">
-              <div className="more_details" onClick={handleClose}>
-                <h3 className="text">CLOSE</h3>
+            <div classNameName="modal_btns reviewmodal">
+              <div classNameName="more_details" onClick={handleClose}>
+                <h3 classNameName="text">CLOSE</h3>
               </div>
             </div>
             <ModalReview
@@ -58,7 +58,7 @@ export default function Review({ author, authorid, message }) {
         </Modal>
       ) : (
         <Modal
-          className="review_modal"
+          classNameName="review_modal"
           show={show}
           onHide={handleClose}
           backdrop="static"
@@ -66,9 +66,9 @@ export default function Review({ author, authorid, message }) {
           style={{ left: "8%", top: "5%", height: "90%" }}
         >
           <Modal.Body>
-            <div className="modal_btns reviewmodal">
-              <div className="more_details" onClick={handleClose}>
-                <h3 className="text">CLOSE</h3>
+            <div classNameName="modal_btns reviewmodal">
+              <div classNameName="more_details" onClick={handleClose}>
+                <h3 classNameName="text">CLOSE</h3>
               </div>
             </div>
             <ModalReview

@@ -1643,6 +1643,29 @@ html {
   }
 }
 
+@media only screen and (max-width: 1550px){
+  .play_trailer {
+    position: relative;
+    top: 250px;
+    left: 140px;
+  }
+  .wrapper {
+    max-width: 360px;
+  }
+  .review-message p {
+    height: 54px;
+  }
+  .read_full{
+    left: 57%;
+  }
+  .text {
+    font-size: 10px;
+  }
+  .movie_box {
+    width: 225px;
+  }
+}
+
 @media only screen and (max-width: 1450px) {
   .main li:first-child {
     margin-left: 40px;

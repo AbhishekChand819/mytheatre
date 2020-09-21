@@ -196,7 +196,7 @@ export default function MovieDetails() {
                 <div className="other_item">
                   <span className="movie_content heading">Genre : </span>
                   {genres.map((genre, i) => (
-                    <span className="movie_content value">{genre.name}</span>
+                    <span className="movie_content value" key={i}>{genre.name}</span>
                   ))}
                 </div>
                 <div className="other_item">

@@ -36,7 +36,7 @@ export default function Review({ author, authorid, message }) {
 
       {window.innerWidth < 500 ? (
         <Modal
-          classNameName="review_modal"
+          classname="review_modal"
           show={show}
           onHide={handleClose}
           backdrop="static"
@@ -44,9 +44,9 @@ export default function Review({ author, authorid, message }) {
           style={{ left: "8%", top: "5%", height: "90%" }}
         >
           <Modal.Body>
-            <div classNameName="modal_btns reviewmodal">
-              <div classNameName="more_details" onClick={handleClose}>
-                <h3 classNameName="text">CLOSE</h3>
+            <div classname="modal_btns reviewmodal">
+              <div classname="more_details" onClick={handleClose}>
+                <h3 classname="text">CLOSE</h3>
               </div>
             </div>
             <ModalReview
@@ -58,7 +58,7 @@ export default function Review({ author, authorid, message }) {
         </Modal>
       ) : (
         <Modal
-          classNameName="review_modal"
+          classname="review_modal"
           show={show}
           onHide={handleClose}
           backdrop="static"
@@ -66,9 +66,9 @@ export default function Review({ author, authorid, message }) {
           style={{ left: "8%", top: "5%", height: "90%" }}
         >
           <Modal.Body>
-            <div classNameName="modal_btns reviewmodal">
-              <div classNameName="more_details" onClick={handleClose}>
-                <h3 classNameName="text">CLOSE</h3>
+            <div classname="modal_btns reviewmodal">
+              <div classname="more_details" onClick={handleClose}>
+                <h3 classname="text">CLOSE</h3>
               </div>
             </div>
             <ModalReview
